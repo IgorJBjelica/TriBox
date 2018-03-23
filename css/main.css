@@ -1,12 +1,26 @@
+@font-face{ 
+    font-family: 'Caviar';
+	src: url('../fonts/CaviarDreams-webfont.woff');
+	src: url('../fonts/CaviarDreams-webfont.eot?iefix') format('eot'),
+         url('../fonts/CaviarDreams-webfont.woff') format('woff'),
+         url('../fonts/caviardreams_bold_macroman/Caviar_Dreams_Bold-webfont.eot?iefix') format('eot'),
+         url('../fonts/caviardreams_bold_macroman/Caviar_Dreams_Bold-webfont.woff') format('woff');
+}
+
 body {
+    font-family: 'Proxima Nova', Georgia, sans-serif;
     padding: 0;
     margin: 0;
     /* background-color: aqua; */
 }
 
+h1, h2, h3, h4, h5, h6, .contact_form_container {
+    font-family: 'Caviar', Arial, sans-serif;
+}
+
 section {
     width: 100%;
-    height: 450px;
+    height: 500px;
     padding: 0;
 }
 
@@ -110,19 +124,48 @@ nav {
 /* ************************************************NAJSVETLO************************************************* */
 
 .svetlo_container {
-    background: 0 61.6% / cover no-repeat url('images/sajt slike/pexels-photo-709848.jpeg');
+    background: 0 63% / cover no-repeat url('images/sajt slike/pexels-photo-709848.jpeg');
     
     transition: all .6s ease-in-out;
 }
 
-.content {
+.svetlo_container .content {
     width: 100%;
     height: 100%;
 
     transform: translateX(-100%);
     opacity: 0;
 
-    background: white;
+    background: rgba(255,255,255,0.9);
+}
+
+.svetlo_container .content .text {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 28%;
+    width: 55%;
+    height: auto;
+
+    background-color: transparent;
+}
+
+.text h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+    width: 80%;
+}
+
+.text img {
+    margin: 5% 0 0;
+}
+
+.text p {
+    width: 85%;
+    margin: 5% 0 0 auto;
+    font-size: 1.4rem;
+    font-weight: bold;
 }
 
 .svetlo_container:hover {
@@ -164,11 +207,262 @@ nav {
 /* ***********************************************ZASTOKARTON************************************************ */
 
 .zasto_container {
-    background-color: orangered;
+    background-color: #ffffff;
+}
+
+.zasto_container .content {
+    width: 100%;
+    height: 100%;
+}
+
+.zasto_container .content .text {
+    position: relative;
+    margin: 0 auto;
+    top: 4%;
+    right: 0;
+    width: 85%;
+    height: auto;
+}
+
+.zasto_container h1, .tipovi_proizvoda_container h1 {
+    width: 71%;
+    margin: 0 auto;
+}
+
+.zasto_container div, .zasto_container ul {
+    position: relative;
+    width: 71%;
+    margin: 5% auto 0;
+}
+
+.zasto_container ul {
+    margin: 1% auto;
+}
+
+.zasto_container ul li {
+    line-height: 2.2rem;
+}
+
+b {
+    color: #4db848;
 }
 
 /* ************************************************MALITIRAZI************************************************* */
 
 .tirazi_container {
     background-color: orchid;
+}
+
+.tirazi_container {
+    background: 0 38% / cover no-repeat url('images/sajt slike/pexels-photo-296878.jpeg');
+    
+    transition: all .6s ease-in-out;
+}
+
+.tirazi_container .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    transform: translateX(-100%);
+    opacity: 0;
+
+    background: rgba(255,255,255,0.9);
+}
+
+.tirazi_container .content .text {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 28%;
+    width: 55%;
+    height: auto;
+
+    background-color: transparent;
+}
+
+.tirazi_container:hover {
+    opacity: .8;
+}
+
+/* ************************************************CONTACT FORM********************************************* */
+
+.contact_form_container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+
+    background: 0 70% / cover no-repeat url('images/sajt slike/leone-venter-469710-unsplash.jpg');
+}
+
+.back_content {
+    position: absolute;
+    top: 10%;
+    bottom: 30%;
+    left: 20%;
+    right: 18%;
+
+    background-color: #4eb848ad;
+}
+
+p.back_text {
+    font-weight: bold;
+    font-size: 2.4rem;
+    letter-spacing: .1rem;
+    line-height: 3.5rem;
+    width: 49%;
+    margin: 14% 0 0 auto; 
+    color: #ffffff;
+}
+
+form {
+    position: absolute;
+    top: 8%;
+    bottom: -48%;
+    left: 5%;
+    right: 53%;
+
+    background-color: #ffffff;
+}
+
+.form_content {
+    display: block;
+    position: relative;
+    width: 72%;
+    height: 80%;
+    margin: 10% auto;
+}
+
+form h2 {
+    width: min-content;
+    margin: 0 auto 5%;
+    letter-spacing: .05rem;
+}
+
+form p.mini_text {
+    text-align: left;
+    font-size: .7462rem;
+    font-weight: 800;
+}
+
+input, textarea {
+    font: 400 13.3333px Arial;
+    /* width: 100%; */
+    padding: 3% 8%;
+    /* line-height: 1.6rem; */
+    border: 3px solid #4db848;
+    margin: 7% auto 3%;
+    font-weight: 800;
+    color: #000000;
+}
+
+textarea {
+    resize: none;
+    height: 30%;
+    overflow: auto;
+}
+
+::placeholder {
+    color: #000000;
+    opacity: 1; /* Firefox */
+}
+
+/* *********************************************TIPOVI PROIZVODA******************************************** */
+
+.tipovi_proizvoda_container {
+    padding-top: 7%;
+    width: 100%;
+    height: 850px;
+
+    background-color: #ffffff;
+}
+
+.tipovi_proizvoda_container h1 {
+    position: relative;
+}
+
+h1 img {
+    position: absolute;
+    bottom: -30%;
+    left: 0;
+}
+
+.proizvodi_boxes {
+    position: relative;
+    width: 100%;
+    height: 45%;
+    margin-top: 8%;
+
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-flex-flow: row nowrap;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+
+    background-color: aquamarine;
+}
+
+.proizvodi_boxes .box {
+    flex-grow: 1;
+
+    transition: all .4s ease-in-out;
+
+    background-color: pink;
+}
+
+.proizvodi_boxes .box:hover {
+    transform: scale(.96);
+}
+
+.proizvodi_boxes .box:hover > .box_content {
+    visibility: visible;
+    opacity: .8;
+}
+
+.box_content {
+    display: table;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    transition: all .6s ease-in-out;
+
+    background-color: #4eb848ad;
+}
+
+.box_content b {
+    display: table-cell;
+    vertical-align: middle;
+    width: min-content;
+    margin: 0;
+    font-size: 1.4rem;
+    letter-spacing: .1rem;
+    color: #ffffff;
+}
+
+/* ***************************************************FOOTER************************************************ */
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    color: #ffffff;
+
+    background-color: #007dc6;
+}
+
+footer .footers_footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 85.7142857%;
+    bottom: 0;
+
+    background-color: #4db848;
 }

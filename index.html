@@ -4,11 +4,14 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>TriBox</title>
+    <title>TriBox Solutions - Kutije po Vasoj meri</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Posao/TriBox/Website/fonts/proxima_fonts/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="/Posao/TriBox/Website/fonts/proxima_fonts/fonts.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <!-- <link rel="preload" href="../fonts/CaviarDreams-webfont.woff" as="font"> -->
 </head>
 
 <body>
@@ -40,23 +43,134 @@
 
     <section class="svetlo_container">
         <div class="content">
-
+            <div class="text">
+                <h1>U NAJBOLJEM SVETLU</h1>
+                <img class="wavy_line_green" src="css/images/sajt slike/section1-line.png" />
+                <p>
+                    Ako imate proizvod koji želite da predstavite u najboljem i najprimamljivijem izdanju tu smo da vam to omogućimo.
+                </p>
+                <p>
+                    Garantujemo vam najprakričnije rešenje koje će mamiti poglede i sačuvati vaš proizvod od oštećenja.
+                </p>
+            </div>
         </div>
     </section>
 
     <section class="zasto_container">
-
+        <div class="content">
+            <div class="text">
+                <h1>ZAŠTO VAM JE POTREBNA KARTONSKA AMBALAŽA?</h1>
+                <div>
+                    <b>OVO JE PET KLJUČNIH RAZLOGA:</b>
+                </div>
+                <ul>
+                    <li>SAČUVAJTE PROIZVOD OD BILO KAKVOG OŠTEĆENJA</li>
+                    <li>PRAKTIČAN NAČIN TRANSPORTA JEDNOG ILI VIŠE KOMADA PROIZVODA</li>
+                    <li>DAJTE MU UNIKATAN I PREPOZNATLJIV IZGLED</li>
+                    <li>IZVOR DODATNIH INFORMACIJA PROIZVODA</li>
+                    <li>SAMO SA KARTONSKOM AMBALAŽOM MOŽETE NEOGRANIČENO DA SE IGRATE OBLICIMA I DIZAJNOM</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <section class="tirazi_container">
-
+        <div class="content">
+            <div class="text">
+                <h1>MALI TIRAŽI</h1>
+                <img class="wavy_line_green" src="css/images/sajt slike/section1-line.png" />
+                <p>
+                    Ukoliko se spremate za kratku prezentaciju ili promociju za koju vam je potrebam luksuzan i jedinstven izgled pakovanja a
+                    opet manji broj kutija tu smo za vas jer razumemo svaku potrebu poslovanja.
+                </p>
+            </div>
+        </div>
     </section>
+
+    <section class="contact_form_container">
+        <div class="back_content">
+            <p class="back_text">
+                SLOBODNO NAS KONTAKTIRAJTE,
+                <br>TU SMO ZBOG VAS.
+            </p>
+
+            <form>
+                <div class="form_content">
+                    <h2>KONTAKTIRAJTE&nbsp;NAS</h2>
+                    <input type="text" name="ime" placeholder="IME" />
+                    <input type="tel" name="telefon" placeholder="TELEFON" />
+                    <p class="mini_text">
+                        Otvoreni od 8h - 17h
+                        <br> Zatvoreni vikendom osim za posebne usluge
+                    </p>
+                    <input type="email" name="email" placeholder="EMAIL" />
+                    <textarea name="poruka" placeholder="PORUKA"></textarea>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="tipovi_proizvoda_container">
+        <div class="text">
+            <h1>
+                TIPOVI PROIZVODA
+                <img src="css/images/sajt slike/section3-line.png" />
+            </h1>
+        </div>
+        <div class="proizvodi_boxes">
+            <div class="box">
+                <div class="box_content">
+                    <b>Kartonska&nbsp;ambalaža</b>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box_content">
+                    <b>Kartonska&nbsp;ambalaža</b>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box_content">
+                    <b>Kartonska&nbsp;ambalaža</b>
+                </div>
+            </div>
+        </div>
+        <div class="under_box_content">
+            <p>
+                <!-- Zato što želimo da vam izađemo u susret za svaki vaš projekat i unikatan dizajn, tu smo za specijalne ponude. Lorem ipsum custom text of something important that tells more about what you do and offer compared to your competition i druge ﬁrme. -->
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="flex_footer">
+            <div class="content_strip">
+                <b>NAVIGACIJA</b>
+                <ul>
+                    <li>O Nama</li>
+                    <li>Produkti</li>
+                    <li>Galerija</li>
+                    <li>Kontakt</li>
+                </ul>
+            </div>
+            <div class="content_strip">
+                <b>KONTAKT</b>
+                
+            </div>
+            <div class="content_strip">
+                <!-- <img /> -->
+            </div>
+        </div>
+        <div class="footers_footer">
+            <span>2018 Designed by Firefly Web Studio.</span>
+        </div>
+    </footer>
 </body>
 <script type="text/javascript">
-	$(document).ready(function(){
-        $('.svetlo_container').on('click', function (event) {
-            $('.content').addClass('slide_in');
+    $(document).ready(function () {
+        $('section').on('click', function (event) {
+            $(this).children('.content').addClass('slide_in');
         });
     }(jQuery));
 </script>
+
 </html>
