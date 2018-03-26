@@ -1,20 +1,23 @@
-@font-face{ 
+@font-face {
     font-family: 'Caviar';
-	src: url('../fonts/CaviarDreams-webfont.woff');
-	src: url('../fonts/CaviarDreams-webfont.eot?iefix') format('eot'),
-         url('../fonts/CaviarDreams-webfont.woff') format('woff'),
-         url('../fonts/caviardreams_bold_macroman/Caviar_Dreams_Bold-webfont.eot?iefix') format('eot'),
-         url('../fonts/caviardreams_bold_macroman/Caviar_Dreams_Bold-webfont.woff') format('woff');
+    src: url('../fonts/CaviarDreams-webfont.woff');
+    src: url('../fonts/CaviarDreams-webfont.eot?iefix') format('eot'), url('../fonts/CaviarDreams-webfont.woff') format('woff'), url('../fonts/caviardreams_bold_macroman/Caviar_Dreams_Bold-webfont.eot?iefix') format('eot'), url('../fonts/caviardreams_bold_macroman/Caviar_Dreams_Bold-webfont.woff') format('woff');
 }
 
 body {
-    font-family: 'Proxima Nova', Georgia, sans-serif;
+    font-family: 'proxima_nova_scosfthin', Georgia, sans-serif;
     padding: 0;
     margin: 0;
     /* background-color: aqua; */
 }
 
-h1, h2, h3, h4, h5, h6, .contact_form_container {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.contact_form_container {
     font-family: 'Caviar', Arial, sans-serif;
 }
 
@@ -28,26 +31,23 @@ nav {
     display: flex;
     width: 100%;
     min-height: 15vh;
-
-    background-color: coral;
+    background-color: #ffffff81;
+    z-index: 999999999;
 }
 
 .container {
     width: 90%;
     margin: 0 auto;
     align-items: center;
-
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
     flex-flow: row nowrap;
     -webkit-flex-flow: row nowrap;
-	justify-content: space-around;
-
-    background-color: burlywood;
+    justify-content: space-around;
+    background-color: transparent;
 }
 
 .navigation {
@@ -56,23 +56,21 @@ nav {
     height: min-content;
     padding-right: 6%;
     margin: 0;
-
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
     flex-flow: row nowrap;
-	-webkit-flex-flow: row nowrap;
+    -webkit-flex-flow: row nowrap;
     justify-content: flex-end;
 }
 
 .navigation a {
-	text-decoration: none;
-	display: block;
-	padding: 1em;
-	color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: rgb(0, 0, 0);
 }
 
 /* .navigation a:hover, .navigation a:focus {
@@ -80,22 +78,20 @@ nav {
 } */
 
 @media all and (max-width: 800px) {
-	.navigation {
-		-webkit-flex-flow: column wrap;
-		flex-flow: column wrap;
-		padding: 0;
-	}
-
-	.navigation a { 
-		text-align: center; 
-		padding: 10px;
-		border-top: 1px solid rgba(255,255,255,0.3); 
-		border-bottom: 1px solid rgba(0,0,0,0.1); 
-	}
-
-	.navigation li:last-of-type a {
-		border-bottom: none;
-	}
+    .navigation {
+        -webkit-flex-flow: column wrap;
+        flex-flow: column wrap;
+        padding: 0;
+    }
+    .navigation a {
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .navigation li:last-of-type a {
+        border-bottom: none;
+    }
 }
 
 .logo {
@@ -113,30 +109,77 @@ nav {
 /* ************************************************PARALLAX************************************************* */
 
 .parallax_container {
+    clip-path: inset(0);
+    position: relative;
     width: 100%;
     height: 85vh;
+    overflow: hidden;
+    /*
     padding: 0;
     margin: 0;
+    background: 0 35% / cover no-repeat url('images/sajt slike/home.png');
+    z-index: 0; */
+}
 
-    background-color: pink;
+.parallax {
+    position: absolute;
+    top: -135px;
+    width: 98vw;
+    z-index: 0;
+}
+
+.parallax ~ img.package {
+    position: absolute;
+    bottom: 4vh;
+    left: 30vw;
+    width: 35vw;
+    transform-origin: 0 0;
+}
+
+.parallax ~ img.text_box {
+    position: absolute;
+    bottom: 33.5vh;
+    width: 16vw;
+    transform-origin: 0 0;
+}
+
+.parallax_text {
+    position: absolute;
+    width: 40vw;
+    font-weight: 800;
+    color: rgb(82, 80, 80);
+}
+
+.parallax_text h1 {
+    width: 25vw;
+    font-size: 1.4rem;
+}
+
+.scissors {
+    position: absolute;
+    width: 19.6vw;
+}
+
+.flap {
+    position: absolute;
+    width: 6vw;
+    transform-origin: center left;
 }
 
 /* ************************************************NAJSVETLO************************************************* */
 
 .svetlo_container {
     background: 0 63% / cover no-repeat url('images/sajt slike/pexels-photo-709848.jpeg');
-    
     transition: all .6s ease-in-out;
 }
 
 .svetlo_container .content {
     width: 100%;
     height: 100%;
-
+    margin-top: 280vh;
     transform: translateX(-100%);
     opacity: 0;
-
-    background: rgba(255,255,255,0.9);
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .svetlo_container .content .text {
@@ -146,7 +189,6 @@ nav {
     right: 28%;
     width: 55%;
     height: auto;
-
     background-color: transparent;
 }
 
@@ -174,34 +216,47 @@ nav {
 
 .content.slide_in {
     -webkit-animation: slide_in 1.6s ease-in-out forwards;
-	-moz-animation: slide_in 1.6s ease-in-out forwards;
-	-ms-animation: slide_in 1.6s ease-in-out forwards;
-	-o-animation: slide_in 1.6s ease-in-out forwards;
-	animation: slide_in 1.6s ease-in-out forwards;
+    -moz-animation: slide_in 1.6s ease-in-out forwards;
+    -ms-animation: slide_in 1.6s ease-in-out forwards;
+    -o-animation: slide_in 1.6s ease-in-out forwards;
+    animation: slide_in 1.6s ease-in-out forwards;
 }
 
-
-
 /* animation */
+
 @-webkit-keyframes slide_in {
-    20% { transform: translateX(-80%); opacity: .7; }
-	100% { transform: translateX(0); opacity: 1; }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 @-moz-keyframes slide_in {
-	100% { transform: translateX(0); opacity: 1; }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 @-ms-keyframes slide_in {
-	100% { transform: translateX(0); opacity: 1; }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 @-o-keyframes slide_in {
-	100% { transform: translateX(0); opacity: 1; }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 @keyframes slide_in {
-	100% { transform: translateX(0); opacity: 1; }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 /* ***********************************************ZASTOKARTON************************************************ */
@@ -224,12 +279,14 @@ nav {
     height: auto;
 }
 
-.zasto_container h1, .tipovi_proizvoda_container h1 {
+.zasto_container h1,
+.tipovi_proizvoda_container h1 {
     width: 71%;
     margin: 0 auto;
 }
 
-.zasto_container div, .zasto_container ul {
+.zasto_container div,
+.zasto_container ul {
     position: relative;
     width: 71%;
     margin: 5% auto 0;
@@ -255,7 +312,6 @@ b {
 
 .tirazi_container {
     background: 0 38% / cover no-repeat url('images/sajt slike/pexels-photo-296878.jpeg');
-    
     transition: all .6s ease-in-out;
 }
 
@@ -263,11 +319,9 @@ b {
     position: relative;
     width: 100%;
     height: 100%;
-
     transform: translateX(-100%);
     opacity: 0;
-
-    background: rgba(255,255,255,0.9);
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .tirazi_container .content .text {
@@ -277,7 +331,6 @@ b {
     right: 28%;
     width: 55%;
     height: auto;
-
     background-color: transparent;
 }
 
@@ -291,7 +344,6 @@ b {
     position: relative;
     width: 100%;
     height: 600px;
-
     background: 0 70% / cover no-repeat url('images/sajt slike/leone-venter-469710-unsplash.jpg');
 }
 
@@ -301,7 +353,6 @@ b {
     bottom: 30%;
     left: 20%;
     right: 18%;
-
     background-color: #4eb848ad;
 }
 
@@ -311,7 +362,7 @@ p.back_text {
     letter-spacing: .1rem;
     line-height: 3.5rem;
     width: 49%;
-    margin: 14% 0 0 auto; 
+    margin: 14% 0 0 auto;
     color: #ffffff;
 }
 
@@ -321,7 +372,6 @@ form {
     bottom: -48%;
     left: 5%;
     right: 53%;
-
     background-color: #ffffff;
 }
 
@@ -345,7 +395,8 @@ form p.mini_text {
     font-weight: 800;
 }
 
-input, textarea {
+input,
+textarea {
     font: 400 13.3333px Arial;
     /* width: 100%; */
     padding: 3% 8%;
@@ -364,7 +415,8 @@ textarea {
 
 ::placeholder {
     color: #000000;
-    opacity: 1; /* Firefox */
+    opacity: 1;
+    /* Firefox */
 }
 
 /* *********************************************TIPOVI PROIZVODA******************************************** */
@@ -373,7 +425,6 @@ textarea {
     padding-top: 7%;
     width: 100%;
     height: 850px;
-
     background-color: #ffffff;
 }
 
@@ -392,33 +443,37 @@ h1 img {
     width: 100%;
     height: 45%;
     margin-top: 8%;
-
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-
-	-webkit-flex-flow: row nowrap;
-	flex-flow: row nowrap;
-	justify-content: flex-start;
-
-    background-color: aquamarine;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
 }
 
 .proizvodi_boxes .box {
-    flex-grow: 1;
-
+    display: flex;
+    width: 100%;
     transition: all .4s ease-in-out;
-
     background-color: pink;
 }
+
+/* .box:nth-child(1) {
+    background-image: url('');
+}
+
+.box:nth-child(2) {
+    background-image: url('');
+}
+
+.box:nth-child(3) {
+    background-image: url('');
+} */
 
 .proizvodi_boxes .box:hover {
     transform: scale(.96);
 }
 
-.proizvodi_boxes .box:hover > .box_content {
+.proizvodi_boxes .box:hover>.box_content {
     visibility: visible;
     opacity: .8;
 }
@@ -429,21 +484,78 @@ h1 img {
     opacity: 0;
     width: 100%;
     height: 100%;
-    text-align: center;
-
     transition: all .6s ease-in-out;
-
     background-color: #4eb848ad;
 }
 
 .box_content b {
     display: table-cell;
     vertical-align: middle;
-    width: min-content;
-    margin: 0;
+    text-align: center;
     font-size: 1.4rem;
     letter-spacing: .1rem;
     color: #ffffff;
+}
+
+.under_box_content {
+    position: relative;
+    width: 100%;
+    height: 30%;
+}
+
+.under_box_content p {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    right: 20%;
+    transform: translateY(-50%);
+    margin: auto;
+    font-size: 1.4rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .6s ease-in-out;
+}
+
+.pVisible {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* animation */
+
+@-webkit-keyframes fade_in {
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fade_in {
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fade_in {
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fade_in {
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@keyframes fade_in {
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
 }
 
 /* ***************************************************FOOTER************************************************ */
@@ -451,18 +563,132 @@ h1 img {
 footer {
     position: relative;
     width: 100%;
-    height: 350px;
+    height: 300px;
     color: #ffffff;
-
     background-color: #007dc6;
 }
 
-footer .footers_footer {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 85.7142857%;
-    bottom: 0;
+.flex_footer {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+}
 
+.flex_footer .content_strip {
+    width: 20.5%;
+    height: 70%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.flex_footer .content_strip:last-child svg {
+    margin: 0 0 0 auto;
+}
+
+.flex_footer .content_strip:last-child p {
+    text-align: right;
+    margin: 14% 0 0 0;
+}
+
+.flex_item {
+    margin: 0;
+    width: 100%;
+    height: min-content;
+    text-align: center;
+}
+
+.flex_footer .content_strip ul {
+    /* margin: 0 auto; */
+    padding: 0;
+    width: min-content;
+    line-height: 2rem;
+    list-style: none;
+    text-align: left;
+}
+
+.flex_footer .content_strip ul li {
+    /* font-size: 1rem; */
+    letter-spacing: .15rem;
+}
+
+.flex_footer .content_strip:nth-child(2) ul li:nth-child(n+2) {
+    line-height: 1.2rem;
+}
+
+.flex_footer .content_strip ul li:nth-child(1),
+.flex_footer .content_strip b {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 15%;
+}
+
+.footers_footer {
+    width: 100%;
+    height: 50px;
+    color: #ffffff;
     background-color: #4db848;
+}
+
+.footers_footer div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.footers_footer span {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* **************************************************KONTAKT************************************************ */
+
+/* ***************************************************MAPA************************************************** */
+
+.map_container {
+    width: 100%;
+    height: 70vh;
+}
+
+.map_container iframe {
+    -webkit-filter: saturate(20%);
+    filter: saturate(20%);
+
+    transition: all .6s ease-in-out;
+}
+
+.map_container iframe:hover {
+    -webkit-filter: saturate(100%);
+    filter: saturate(100%);
+}
+
+.info_container {
+    width: 100%;
+    height: 500px;
+}
+
+/* ***************************************************INFO************************************************** */
+
+.info_container {
+    padding: 3% 0;
+}
+
+.info_container h1 {
+    margin: 0 8%;
+    letter-spacing: .2rem;
 }
