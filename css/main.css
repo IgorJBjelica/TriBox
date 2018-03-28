@@ -124,6 +124,7 @@ nav {
 
 #logo {
     width: 100%;
+    max-width: 270px;
     vertical-align: middle;
 }
 
@@ -149,7 +150,8 @@ nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -44%);
-    width: 1300px;
+    width: 95vw;
+    max-width: 1900px;
     z-index: 0;
 }
 
@@ -306,7 +308,7 @@ b {
 }
 
 .floaty_box.first {
-    top: 12vh;
+    top: 6%;
     left: -3vh;
     width: 18.5vh !important;
     height: 18.5vh !important;
@@ -315,8 +317,8 @@ b {
 }
 
 .floaty_box.second {
-    top: 40vh;
-    left: 10vh;
+    top: 65%;
+    left: 8%;
     width: 25vh !important;
     height: 25vh !important;
     border-radius: 20%;
@@ -325,7 +327,7 @@ b {
 }
 
 .floaty_box.third {
-    top: 56vh;
+    top: 85%;
     right: 40vh;
     width: 20vh !important;
     height: 20vh !important;
@@ -334,8 +336,8 @@ b {
 }
 
 .floaty_box.forth {
-    top: 20vh;
-    right: 8vh;
+    top: 25%;
+    right: 3%;
     width: 32vh !important;
     height: 32vh !important;
     border-radius: 45%;
@@ -389,7 +391,8 @@ b {
     position: absolute;
     top: 10%;
     bottom: 30%;
-    left: 20%;
+    widows: 60%;
+    max-width: 900px;
     right: 18%;
     background-color: #4eb848ad;
 }
