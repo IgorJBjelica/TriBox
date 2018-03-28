@@ -1,14 +1,36 @@
 @font-face {
-    font-family: 'Caviar';
-    src: url('../fonts/CaviarDreams-webfont.woff');
-    src: url('../fonts/CaviarDreams-webfont.eot?iefix') format('eot'), url('../fonts/CaviarDreams-webfont.woff') format('woff'), url('../fonts/caviardreams_bold_macroman/Caviar_Dreams_Bold-webfont.eot?iefix') format('eot'), url('../fonts/caviardreams_bold_macroman/Caviar_Dreams_Bold-webfont.woff') format('woff');
+    font-family: 'Caviar-Dreams';
+    src: url('../fonts/Caviar-Dreams.ttf.woff') format('woff'), url('../fonts/Caviar-Dreams.ttf.svg#Caviar-Dreams') format('svg'), url('../fonts/Caviar-Dreams.ttf.eot'), url('../fonts/Caviar-Dreams.ttf.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'Chivo-Light';
+    src:
+         url('../fonts/Chivo-Light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Chivo-Light.woff2') format('woff2'),
+         url('../fonts/Chivo-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Chivo-Regular';
+    src:
+         url('../fonts/Chivo-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Chivo-Regular.woff2') format('woff2'),
+         url('../fonts/Chivo-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Chivo-Bold';
+    src:
+         url('../fonts/Chivo-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Chivo-Bold.woff2') format('woff2'),
+         url('../fonts/Chivo-Bold.woff') format('woff');
 }
 
 body {
-    font-family: 'proxima_nova_scosfthin', Georgia, sans-serif;
+    font-family: 'Chivo-Regular', Georgia, sans-serif;
     padding: 0;
     margin: 0;
-    /* background-color: aqua; */
 }
 
 h1,
@@ -16,14 +38,14 @@ h2,
 h3,
 h4,
 h5,
-h6,
-.contact_form_container {
-    font-family: 'Caviar', Arial, sans-serif;
+h6 {
+    font-family: 'Caviar-Dreams', Arial, sans-serif;
 }
 
 section {
     width: 100%;
-    height: 500px;
+    min-height: 500px;
+    height: auto;
     padding: 0;
 }
 
@@ -32,7 +54,7 @@ nav {
     width: 100%;
     min-height: 15vh;
     background-color: #ffffff81;
-    z-index: 999999999;
+    /* font-family: ''; */
 }
 
 .container {
@@ -95,8 +117,7 @@ nav {
 }
 
 .logo {
-    width: 12%;
-    padding: 1% 2%;
+    width: 19%;
     flex-shrink: 1;
     vertical-align: middle;
 }
@@ -114,6 +135,8 @@ nav {
     width: 100%;
     height: 85vh;
     overflow: hidden;
+    position: fixed; top: 15vh;
+    height: 85vh;
     /*
     padding: 0;
     margin: 0;
@@ -123,22 +146,24 @@ nav {
 
 .parallax {
     position: absolute;
-    top: -135px;
-    width: 98vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -44%);
+    width: 1300px;
     z-index: 0;
 }
 
-.parallax ~ img.package {
+.parallax~img.package {
     position: absolute;
-    bottom: 4vh;
+    top: 35vh;
     left: 30vw;
     width: 35vw;
     transform-origin: 0 0;
 }
 
-.parallax ~ img.text_box {
+.parallax~img.text_box {
     position: absolute;
-    bottom: 33.5vh;
+    top: 35vh;
     width: 16vw;
     transform-origin: 0 0;
 }
@@ -147,12 +172,13 @@ nav {
     position: absolute;
     width: 40vw;
     font-weight: 800;
-    color: rgb(82, 80, 80);
+    color: #554b4a;
 }
 
 .parallax_text h1 {
-    width: 25vw;
-    font-size: 1.4rem;
+    width: 35vw;
+    font-size: 3rem;
+    margin-top: 0;
 }
 
 .scissors {
@@ -162,8 +188,9 @@ nav {
 
 .flap {
     position: absolute;
-    width: 6vw;
-    transform-origin: center left;
+    left: -5vh;
+    height: 6vw;
+    transform-origin: top center;
 }
 
 /* ************************************************NAJSVETLO************************************************* */
@@ -175,11 +202,13 @@ nav {
 
 .svetlo_container .content {
     width: 100%;
-    height: 100%;
+    min-height: inherit;
     margin-top: 280vh;
     transform: translateX(-100%);
     opacity: 0;
     background: rgba(255, 255, 255, 0.9);
+
+    transition: all .6s ease-in-out;
 }
 
 .svetlo_container .content .text {
@@ -207,56 +236,11 @@ nav {
     width: 85%;
     margin: 5% 0 0 auto;
     font-size: 1.4rem;
-    font-weight: bold;
 }
 
-.svetlo_container:hover {
-    opacity: .8;
-}
-
-.content.slide_in {
-    -webkit-animation: slide_in 1.6s ease-in-out forwards;
-    -moz-animation: slide_in 1.6s ease-in-out forwards;
-    -ms-animation: slide_in 1.6s ease-in-out forwards;
-    -o-animation: slide_in 1.6s ease-in-out forwards;
-    animation: slide_in 1.6s ease-in-out forwards;
-}
-
-/* animation */
-
-@-webkit-keyframes slide_in {
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@-moz-keyframes slide_in {
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@-ms-keyframes slide_in {
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@-o-keyframes slide_in {
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slide_in {
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+.content[slide_in='1'] {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
 }
 
 /* ***********************************************ZASTOKARTON************************************************ */
@@ -267,7 +251,7 @@ nav {
 
 .zasto_container .content {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
 }
 
 .zasto_container .content .text {
@@ -281,19 +265,22 @@ nav {
 
 .zasto_container h1,
 .tipovi_proizvoda_container h1 {
-    width: 71%;
+    /* width: 71%; */
     margin: 0 auto;
 }
 
 .zasto_container div,
 .zasto_container ul {
     position: relative;
-    width: 71%;
+    width: 75%;
     margin: 5% auto 0;
 }
 
 .zasto_container ul {
     margin: 1% auto;
+    color: rgb(29, 29, 29);
+    font-size: 1.2rem;
+    /* font-family: ''; */
 }
 
 .zasto_container ul li {
@@ -301,7 +288,59 @@ nav {
 }
 
 b {
+    /* font-family: ''; */
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #007dc6;
+}
+
+.green {
     color: #4db848;
+}
+
+.floaty_box {
+    content: '';
+    position: absolute !important;
+    margin: 0 !important;
+    background-color: #4db848;
+}
+
+.floaty_box.first {
+    top: 12vh;
+    left: -3vh;
+    width: 18.5vh !important;
+    height: 18.5vh !important;
+    border-radius: 30%;
+    transform: rotate(14deg);
+}
+
+.floaty_box.second {
+    top: 40vh;
+    left: 10vh;
+    width: 25vh !important;
+    height: 25vh !important;
+    border-radius: 20%;
+    transform: rotate(-16deg);
+    background-color: #007dc6;
+}
+
+.floaty_box.third {
+    top: 56vh;
+    right: 40vh;
+    width: 20vh !important;
+    height: 20vh !important;
+    border-radius: 20%;
+    transform: rotate(-34deg);
+}
+
+.floaty_box.forth {
+    top: 20vh;
+    right: 8vh;
+    width: 32vh !important;
+    height: 32vh !important;
+    border-radius: 45%;
+    transform: rotate(14deg);
+    background-color: #007dc6;
 }
 
 /* ************************************************MALITIRAZI************************************************* */
@@ -318,10 +357,12 @@ b {
 .tirazi_container .content {
     position: relative;
     width: 100%;
-    height: 100%;
+    min-height: inherit;
     transform: translateX(-100%);
     opacity: 0;
     background: rgba(255, 255, 255, 0.9);
+
+    transition: all .6s ease-in-out;
 }
 
 .tirazi_container .content .text {
@@ -334,16 +375,13 @@ b {
     background-color: transparent;
 }
 
-.tirazi_container:hover {
-    opacity: .8;
-}
-
 /* ************************************************CONTACT FORM********************************************* */
 
 .contact_form_container {
     position: relative;
     width: 100%;
     height: 600px;
+    font-family: 'Chivo-Light' !important;
     background: 0 70% / cover no-repeat url('images/sajt slike/leone-venter-469710-unsplash.jpg');
 }
 
@@ -360,7 +398,7 @@ p.back_text {
     font-weight: bold;
     font-size: 2.4rem;
     letter-spacing: .1rem;
-    line-height: 3.5rem;
+    line-height: 3rem;
     width: 49%;
     margin: 14% 0 0 auto;
     color: #ffffff;
@@ -387,6 +425,7 @@ form h2 {
     width: min-content;
     margin: 0 auto 5%;
     letter-spacing: .05rem;
+    /* font-family: '' !important; */
 }
 
 form p.mini_text {
@@ -397,13 +436,13 @@ form p.mini_text {
 
 input,
 textarea {
-    font: 400 13.3333px Arial;
-    /* width: 100%; */
+    width: 80%;
+    font-family: '';
+    font-weight: 800;
+    opacity: 1;
     padding: 3% 8%;
-    /* line-height: 1.6rem; */
     border: 3px solid #4db848;
     margin: 7% auto 3%;
-    font-weight: 800;
     color: #000000;
 }
 
@@ -411,12 +450,15 @@ textarea {
     resize: none;
     height: 30%;
     overflow: auto;
+    color: #000000;
+    opacity: 1;
 }
 
 ::placeholder {
+    font-family: '';
+    font-weight: 800;
     color: #000000;
     opacity: 1;
-    /* Firefox */
 }
 
 /* *********************************************TIPOVI PROIZVODA******************************************** */
@@ -454,7 +496,7 @@ h1 img {
     display: flex;
     width: 100%;
     transition: all .4s ease-in-out;
-    background-color: pink;
+    /* background-color: #4db848; */
 }
 
 /* .box:nth-child(1) {
@@ -490,11 +532,28 @@ h1 img {
 
 .box_content b {
     display: table-cell;
+    width: 100%;
     vertical-align: middle;
     text-align: center;
     font-size: 1.4rem;
     letter-spacing: .1rem;
     color: #ffffff;
+}
+
+/* .inner_box_content {
+    position: table-row;
+    width: 100%;
+    height: 30%;
+} */
+
+.inner_box_content p {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    right: 20%;
+    transform: translateY(-50%);
+    margin: auto;
+    /* font-size: 1.4rem; */
 }
 
 .under_box_content {
@@ -511,9 +570,9 @@ h1 img {
     transform: translateY(-50%);
     margin: auto;
     font-size: 1.4rem;
-    opacity: 0;
-    visibility: hidden;
-    transition: all .6s ease-in-out;
+    /* opacity: 0; */
+    /* visibility: hidden; */
+    /* transition: all .6s ease-in-out; */
 }
 
 .pVisible {
@@ -668,7 +727,6 @@ footer {
 .map_container iframe {
     -webkit-filter: saturate(20%);
     filter: saturate(20%);
-
     transition: all .6s ease-in-out;
 }
 
