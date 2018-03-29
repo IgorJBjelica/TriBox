@@ -391,7 +391,7 @@ b {
     position: absolute;
     top: 10%;
     bottom: 30%;
-    widows: 60%;
+    width: 60%;
     max-width: 900px;
     right: 18%;
     background-color: #4eb848ad;
