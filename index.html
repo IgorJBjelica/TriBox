@@ -25,14 +25,13 @@
         data-1200="opacity: 0; visibility: hidden;">
         <div class="container">
             <div class="logo">
-                <img id="logo" src="css/images/17.12.2017_TriBox-Logo/[TEMP]Logo.gif" style="max-width: 545px;">
+                <a href="index.html">
+                    <img id="logo" src="css/images/17.12.2017_TriBox-Logo/[TEMP]Logo.gif" style="max-width: 545px;">
+                </a>
             </div>
             <ul class="navigation">
                 <li>
-                    <a href="">O NAMA</a>
-                </li>
-                <li>
-                    <a href="">PRODUKTI</a>
+                    <a href="index.html">O NAMA</a>
                 </li>
                 <li>
                     <a href="">GALERIJA</a>
@@ -57,15 +56,12 @@
                 proizvodnja valovitog kartona izuzetnog kvaliteta
             </p>
         </div>
-        <img class="parallax" data-0="opacity: 1;" data-250="opacity: 0;" src="css/images/sajt slike/home.png"
-        />
-        <img class="flap" data-0="transform: rotate(0deg); left: -5vw;" data-680="transform: rotate(0deg); left: -5vw;"
-            data-750="transform: rotate(-130deg); left: 6vw;" data-1000="transform: rotate(-130deg); left: 6vw;"
-            data-1100="transform: rotate(0deg); left: 6vw;" data-1200="transform: rotate(0deg); left: -15vw;"
+        <img class="parallax" data-0="opacity: 1;" data-250="opacity: 0;" src="css/images/sajt slike/home.png" />
+        <img class="flap" data-0="transform: rotate(0deg); left: -5vw;" data-680="transform: rotate(0deg); left: -5vw;" data-750="transform: rotate(-130deg); left: 6vw;"
+            data-1000="transform: rotate(-130deg); left: 6vw;" data-1100="transform: rotate(0deg); left: 6vw;" data-1200="transform: rotate(0deg); left: -15vw;"
             src="css/images/sajt slike/flap.png" style="top: 38vh;" />
-        <img class="flap" data-0="transform: rotate(0deg); left: -5vw;" data-680="transform: rotate(0deg); left: -5vw;"
-            data-750="transform: rotate(130deg); left: 6vw;" data-1000="transform: rotate(130deg); left: 6vw;"
-            data-1100="transform: rotate(0deg); left: 6vw;" data-1200="transform: rotate(0deg); left: -15vw;"
+        <img class="flap" data-0="transform: rotate(0deg); left: -5vw;" data-680="transform: rotate(0deg); left: -5vw;" data-750="transform: rotate(130deg); left: 6vw;"
+            data-1000="transform: rotate(130deg); left: 6vw;" data-1100="transform: rotate(0deg); left: 6vw;" data-1200="transform: rotate(0deg); left: -15vw;"
             src="css/images/sajt slike/flap.png" style="top: 41vh; transform-origin: bottom center;" />
         <img class="text_box" data-0="transform: rotate(-16deg); left: 73vw;" data-500="transform: rotate(0); left: -8vw;" data-1100="transform: rotate(0); left: -8vw;"
             data-1200="transform: rotate(0); left: -18vw;" src="css/images/sajt slike/pack-box.png" />
@@ -330,10 +326,10 @@
 
             var r = 1.7;
 
-            var xcenter = (100 * parseFloat($('.floaty_box.first').css('left')) / parseFloat($(window).height()));
+            var xcenter = (100 * parseFloat($('.floaty_box.first').css('left')) / parseFloat($(window).width()));
             var ycenter = (100 * parseFloat($('.floaty_box.first').css('top')) / parseFloat($(window).height()));;
-            var newLeft = Math.floor(xcenter - 20 + (r * Math.cos(t)));
-            var newTop = Math.floor(ycenter + 70 + (r * Math.sin(t)));
+            var newLeft = Math.floor(xcenter + (r * Math.cos(t)));
+            var newTop = Math.floor(ycenter + (r * Math.sin(t)));
             $('.floaty_box.first').animate({
                 top: newTop,
                 left: newLeft,

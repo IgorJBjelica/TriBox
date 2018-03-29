@@ -95,9 +95,10 @@ nav {
     color: rgb(0, 0, 0);
 }
 
-/* .navigation a:hover, .navigation a:focus {
-    text-decoration: wavy underline lime;
-} */
+.navigation a:hover, .navigation a:focus {
+    color: #007dc6;
+    /* text-decoration: wavy underline lime; */
+}
 
 @media all and (max-width: 800px) {
     .navigation {
@@ -391,7 +392,7 @@ b {
     position: absolute;
     top: 10%;
     bottom: 30%;
-    width: 60%;
+    width: 65%;
     max-width: 900px;
     right: 18%;
     background-color: #4eb848ad;
@@ -410,7 +411,7 @@ p.back_text {
 form {
     position: absolute;
     top: 8%;
-    bottom: -48%;
+    bottom: -50%;
     left: 5%;
     right: 53%;
     background-color: #ffffff;
@@ -419,7 +420,7 @@ form {
 .form_content {
     display: block;
     position: relative;
-    width: 72%;
+    width: 77%;
     height: 80%;
     margin: 10% auto;
 }
@@ -439,11 +440,11 @@ form p.mini_text {
 
 input,
 textarea {
-    width: 80%;
+    width: 90%;
     font-family: '';
     font-weight: 800;
     opacity: 1;
-    padding: 3% 8%;
+    padding: 3% 4%;
     border: 3px solid #4db848;
     margin: 7% auto 3%;
     color: #000000;
