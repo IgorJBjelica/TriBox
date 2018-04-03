@@ -26,7 +26,7 @@
         <div class="container">
             <div class="logo">
                 <a href="index.html">
-                    <img id="logo" src="css/images/17.12.2017_TriBox-Logo/[TEMP]Logo.gif" style="max-width: 545px;">
+                    <img id="logo" src="css/images/17.12.2017_TriBox-Logo/[TEMP]Logo.gif" style="max-width: 270px;">
                 </a>
             </div>
             <ul class="navigation">
@@ -95,7 +95,8 @@
             <div class="floaty_box third"></div>
             <div class="floaty_box forth"></div>
             <div class="text">
-                <h1 id="anchor_svetlo">ZAŠTO VAM JE POTREBNA
+                <h1>ZAŠTO VAM JE POTREBNA
+                    <br>
                     <span class="green">EKO</span> KARTONSKA AMBALAŽA?</h1>
                 <div>
                     <b>OVO JE PET KLJUČNIH RAZLOGA:</b>
@@ -316,30 +317,56 @@
                 inverted: function (p) {
                     return 1 - p;
                 }
+            },
+            mobileCheck: function () {
+                //hack - forces mobile version to be off
+                return false;
             }
         });
 
         var t = 0;
 
-        function moveit() {
-            t += 0.14;
-
-            var r = 1.7;
-
-            var xcenter = (100 * parseFloat($('.floaty_box.first').css('left')) / parseFloat($(window).width()));
-            var ycenter = (100 * parseFloat($('.floaty_box.first').css('top')) / parseFloat($(window).height()));;
+        function moveit(that, xcenter, ycenter, n, r) {
+            t += n;
+            
             var newLeft = Math.floor(xcenter + (r * Math.cos(t)));
             var newTop = Math.floor(ycenter + (r * Math.sin(t)));
-            $('.floaty_box.first').animate({
+            that.animate({
                 top: newTop,
                 left: newLeft,
             }, 1, function () {
-                moveit();
+                moveit(that, xcenter, ycenter, n, r);
             });
         }
 
         $(document).ready(function () {
-            moveit();
+            // var n = 0.14;
+            // var r = 1.7;
+            // var that = $('.floaty_box.first');
+            // var left = parseFloat(that.css('left'));
+            // var top = parseFloat(that.css('top'));
+            // moveit(that, left, top, n, r);
+
+            // // n = 0.14;
+            // r = 1.7;
+            // that = $('.floaty_box.second');
+            // left = parseFloat(that.css('left'));
+            // top = parseFloat(that.css('top'));
+            // moveit(that, left, top, n, r);
+            
+            // // n = 0;
+            // r = 0;
+            // that = $('.floaty_box.third');
+            // left = parseFloat(that.css('left'));
+            // top = parseFloat(that.css('top'));
+            // moveit(that, left, top, n, r);
+            
+            // var n = 0.0015;
+            // r = 7;
+            // that = $('.floaty_box.forth');
+            // left = parseFloat(that.css('left'));
+            // top = parseFloat(that.css('top'));
+            // moveit(that, left, top, n, r);
         });
 
         $('section').on('click', function (event) {

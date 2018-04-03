@@ -5,30 +5,23 @@
 
 @font-face {
     font-family: 'Chivo-Light';
-    src:
-         url('../fonts/Chivo-Light.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Chivo-Light.woff2') format('woff2'),
-         url('../fonts/Chivo-Light.woff') format('woff');
+    src: url('../fonts/Chivo-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Chivo-Light.woff2') format('woff2'), url('../fonts/Chivo-Light.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Chivo-Regular';
-    src:
-         url('../fonts/Chivo-Regular.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Chivo-Regular.woff2') format('woff2'),
-         url('../fonts/Chivo-Regular.woff') format('woff');
+    src: url('../fonts/Chivo-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Chivo-Regular.woff2') format('woff2'), url('../fonts/Chivo-Regular.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Chivo-Bold';
-    src:
-         url('../fonts/Chivo-Bold.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Chivo-Bold.woff2') format('woff2'),
-         url('../fonts/Chivo-Bold.woff') format('woff');
+    src: url('../fonts/Chivo-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Chivo-Bold.woff2') format('woff2'), url('../fonts/Chivo-Bold.woff') format('woff');
 }
 
 body {
-    font-family: 'Chivo-Light', Georgia, sans-serif;
+    font-family: 'Chivo-Light', Helvetica, sans-serif;
+    font-size: 123%;
+    font-size: 1.23vw;
     padding: 0;
     margin: 0;
 }
@@ -91,16 +84,30 @@ nav {
 .navigation a {
     text-decoration: none;
     display: block;
-    padding: 1em;
+    padding: 1rem;
     color: rgb(0, 0, 0);
 }
 
-.navigation a:hover, .navigation a:focus {
+.navigation a:hover,
+.navigation a:focus {
     color: #007dc6;
     /* text-decoration: wavy underline lime; */
 }
 
-@media all and (max-width: 800px) {
+.logo {
+    width: 19%;
+    flex-shrink: 1;
+    vertical-align: middle;
+}
+
+#logo {
+    width: 96%;
+    padding: 2%;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width: 450px) {
+    /*mobile optimisation break point*/
     .navigation {
         -webkit-flex-flow: column wrap;
         flex-flow: column wrap;
@@ -117,16 +124,18 @@ nav {
     }
 }
 
-.logo {
-    width: 19%;
-    flex-shrink: 1;
-    vertical-align: middle;
-}
+@media only screen and (min-width: 450px) and (max-width: 800px) {
+    .parallax {
+        transform: translate(-50%, -50%) !important;
+    }
 
-#logo {
-    width: 100%;
-    max-width: 270px;
-    vertical-align: middle;
+    section {
+        min-height: 400px !important;
+    }
+
+    .contact_form_container {
+        height: auto !important;
+    }
 }
 
 /* ************************************************PARALLAX************************************************* */
@@ -137,13 +146,9 @@ nav {
     width: 100%;
     height: 85vh;
     overflow: hidden;
-    position: fixed; top: 15vh;
+    position: fixed;
+    top: 15vh;
     height: 85vh;
-    /*
-    padding: 0;
-    margin: 0;
-    background: 0 35% / cover no-repeat url('images/sajt slike/home.png');
-    z-index: 0; */
 }
 
 .parallax {
@@ -158,6 +163,7 @@ nav {
 
 .parallax~img.package {
     position: absolute;
+    display: block;
     top: 35vh;
     left: 30vw;
     width: 35vw;
@@ -166,6 +172,7 @@ nav {
 
 .parallax~img.text_box {
     position: absolute;
+    display: block;
     top: 35vh;
     width: 16vw;
     transform-origin: 0 0;
@@ -180,7 +187,8 @@ nav {
 
 .parallax_text h1 {
     width: 35vw;
-    font-size: 3rem;
+    font-size: 300%;
+    font-size: 3.68vw;
     margin-top: 0;
 }
 
@@ -210,7 +218,6 @@ nav {
     transform: translateX(-100%);
     opacity: 0;
     background: rgba(255, 255, 255, 0.9);
-
     transition: all .6s ease-in-out;
 }
 
@@ -224,8 +231,13 @@ nav {
     background-color: transparent;
 }
 
+.svetlo_container .wavy_line_green {
+    width: 16vw;
+}
+
 .text h1 {
-    font-size: 4rem;
+    font-size: 400%;
+    font-size: 4.9vw;
     font-weight: bold;
     margin: 0;
     width: 80%;
@@ -234,7 +246,8 @@ nav {
 .text p {
     width: 85%;
     margin: 5% 0 0 auto;
-    font-size: 1.4rem;
+    font-size: 140%;
+    font-size: 1.72vw;
 }
 
 .content[slide_in='1'] {
@@ -278,8 +291,8 @@ nav {
 .zasto_container ul {
     margin: 1% auto;
     color: rgb(29, 29, 29);
-    font-size: 1.2rem;
-    /* font-family: ''; */
+    font-size: 120%;
+    font-size: 1.473vw;
 }
 
 .zasto_container ul li {
@@ -288,13 +301,22 @@ nav {
 
 b {
     /* font-family: ''; */
-    font-size: 1.3rem;
+    font-size: 130%;
+    font-size: 1.595vw;
     font-weight: 800;
     color: #007dc6;
 }
 
 .green {
     color: #4db848;
+}
+
+.b-blobs__b1 {
+    position: absolute;
+    left: -11%;
+    top: 2%;
+    width: 40vw;
+    height: 40vw;
 }
 
 .floaty_box {
@@ -305,7 +327,7 @@ b {
 }
 
 .floaty_box.first {
-    top: 6%;
+    top: 14%;
     left: -3vh;
     width: 18.5vh !important;
     height: 18.5vh !important;
@@ -360,7 +382,6 @@ b {
     transform: translateX(-100%);
     opacity: 0;
     background: rgba(255, 255, 255, 0.9);
-
     transition: all .6s ease-in-out;
 }
 
@@ -372,6 +393,10 @@ b {
     width: 55%;
     height: auto;
     background-color: transparent;
+}
+
+.tirazi_container .wavy_line_green {
+    width: 25.5vw;
 }
 
 /* ************************************************CONTACT FORM********************************************* */
@@ -396,8 +421,10 @@ b {
 
 p.back_text {
     font-weight: bold;
-    font-size: 2.4rem;
-    letter-spacing: .1rem;
+    font-size: 240%;
+    font-size: 2.945;
+    letter-spacing: 10%;
+    letter-spacing: .12vw;
     line-height: 3rem;
     width: 49%;
     margin: 14% 0 0 auto;
@@ -424,13 +451,15 @@ form {
 form h2 {
     width: min-content;
     margin: 0 auto 5%;
-    letter-spacing: .05rem;
+    letter-spacing: 5%;
+    letter-spacing: .06vw;
     /* font-family: '' !important; */
 }
 
 form p.mini_text {
     text-align: left;
-    font-size: .7462rem;
+    font-size: 74.62%;
+    font-size: .915vw;
     font-weight: 800;
 }
 
@@ -476,6 +505,8 @@ textarea {
 
 h1 img {
     position: absolute;
+    display: block;
+    width: 45vw;
     bottom: -30%;
     left: 0;
 }
@@ -499,17 +530,17 @@ h1 img {
     /* background-color: #4db848; */
 }
 
-/* .box:nth-child(1) {
-    background-image: url('');
+.box:nth-child(1) {
+    background: center / cover no-repeat url('images/sajt slike/IMG1.jpg');
 }
 
 .box:nth-child(2) {
-    background-image: url('');
+    background: 0 33% / cover no-repeat url('images/sajt slike/IMG2.jpg');
 }
 
 .box:nth-child(3) {
-    background-image: url('');
-} */
+    background: center / cover no-repeat url('images/sajt slike/IMG3.jpg');
+}
 
 .proizvodi_boxes .box:hover {
     transform: scale(.96);
@@ -535,8 +566,10 @@ h1 img {
     width: 100%;
     vertical-align: middle;
     text-align: center;
-    font-size: 1.4rem;
-    letter-spacing: .1rem;
+    font-size: 140%;
+    font-size: 1.72vw;
+    letter-spacing: 10%;
+    letter-spacing: .126vw;
     color: #ffffff;
 }
 
@@ -569,7 +602,8 @@ h1 img {
     right: 20%;
     transform: translateY(-50%);
     margin: auto;
-    font-size: 1.4rem;
+    font-size: 140%;
+    font-size: 1.72vw;
     /* opacity: 0; */
     /* visibility: hidden; */
     /* transition: all .6s ease-in-out; */
@@ -686,7 +720,8 @@ footer {
 .flex_footer .content_strip b {
     font-family: 'Helvetica';
     color: #ffffff;
-    font-size: 1.25rem;
+    font-size: 125%;
+    font-size: 1.534vw;
     font-weight: 600;
     margin-bottom: 15%;
 }
@@ -744,5 +779,6 @@ footer {
 
 .info_container h1 {
     margin: 0 8%;
-    letter-spacing: .2rem;
+    letter-spacing: 20%;
+    letter-spacing: .245vw;
 }
