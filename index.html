@@ -34,7 +34,7 @@
                     <a href="index.html">O NAMA</a>
                 </li>
                 <li>
-                    <a href="">GALERIJA</a>
+                    <a>GALERIJA</a>
                 </li>
                 <li>
                     <a href="kontakt.html">KONTAKT</a>
@@ -57,12 +57,12 @@
             </p>
         </div>
         <img class="parallax" data-0="opacity: 1;" data-250="opacity: 0;" src="css/images/sajt slike/home.png" />
-        <img class="flap" data-0="transform: rotate(0deg); left: -5vw;" data-680="transform: rotate(0deg); left: -5vw;" data-750="transform: rotate(-130deg); left: 6vw;"
+        <img id="upper" class="flap" data-0="transform: rotate(0deg); left: -5vw;" data-680="transform: rotate(0deg); left: -5vw;" data-750="transform: rotate(-130deg); left: 6vw;"
             data-1000="transform: rotate(-130deg); left: 6vw;" data-1100="transform: rotate(0deg); left: 6vw;" data-1200="transform: rotate(0deg); left: -15vw;"
-            src="css/images/sajt slike/flap.png" style="top: 38vh;" />
-        <img class="flap" data-0="transform: rotate(0deg); left: -5vw;" data-680="transform: rotate(0deg); left: -5vw;" data-750="transform: rotate(130deg); left: 6vw;"
+            src="css/images/sajt slike/flap.png" />
+        <img id="lower" class="flap" data-0="transform: rotate(0deg); left: -5vw;" data-680="transform: rotate(0deg); left: -5vw;" data-750="transform: rotate(130deg); left: 6vw;"
             data-1000="transform: rotate(130deg); left: 6vw;" data-1100="transform: rotate(0deg); left: 6vw;" data-1200="transform: rotate(0deg); left: -15vw;"
-            src="css/images/sajt slike/flap.png" style="top: 41vh; transform-origin: bottom center;" />
+            src="css/images/sajt slike/flap.png" style="transform-origin: bottom center;" />
         <img class="text_box" data-0="transform: rotate(-16deg); left: 73vw;" data-500="transform: rotate(0); left: -8vw;" data-1100="transform: rotate(0); left: -8vw;"
             data-1200="transform: rotate(0); left: -18vw;" src="css/images/sajt slike/pack-box.png" />
         <img class="package" data-0="transform: rotate(-16deg); top: 35vh; left: 30vw" data-200="transform: rotate(0); top: 20vh; left: 40vw;"
@@ -193,7 +193,7 @@
                         <b class="flex_item">NAVIGACIJA</b>
                     </li>
                     <li><a href="#">O&nbsp;Nama</a></li>
-                    <li><a href="">Galerija</a></li>
+                    <li><a>Galerija</a></li>
                     <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
             </div>
@@ -339,32 +339,15 @@
         }
 
         $(document).ready(function () {
+            // if(parseInt($('window').width()) <= 430){
+            //     $('.paralax_container').html()
+            // }
+
             // var n = 0.14;
             // var r = 1.7;
             // var that = $('.floaty_box.first');
             // var left = parseFloat(that.css('left'));
             // var top = parseFloat(that.css('top'));
-            // moveit(that, left, top, n, r);
-
-            // // n = 0.14;
-            // r = 1.7;
-            // that = $('.floaty_box.second');
-            // left = parseFloat(that.css('left'));
-            // top = parseFloat(that.css('top'));
-            // moveit(that, left, top, n, r);
-            
-            // // n = 0;
-            // r = 0;
-            // that = $('.floaty_box.third');
-            // left = parseFloat(that.css('left'));
-            // top = parseFloat(that.css('top'));
-            // moveit(that, left, top, n, r);
-            
-            // var n = 0.0015;
-            // r = 7;
-            // that = $('.floaty_box.forth');
-            // left = parseFloat(that.css('left'));
-            // top = parseFloat(that.css('top'));
             // moveit(that, left, top, n, r);
         });
 

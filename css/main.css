@@ -98,12 +98,13 @@ nav {
     bottom: 10px;
     left: 10%;
     visibility: hidden;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-  }
+    -webkit-transform: scaleX(0) translateX(0);
+    transform: scaleX(0) translateX(0);
+    -webkit-transition: transform 0.3s ease-in-out 0s;
+    transition: transform 0.3s ease-in-out 0s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
 
 .navigation a:hover,
 .navigation a:focus {
@@ -114,7 +115,7 @@ nav {
     visibility: visible;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
-  }
+}
 
 .logo {
     width: 19%;
@@ -131,51 +132,52 @@ nav {
 @media only screen and (max-width: 450px) {
     /*mobile optimisation break point*/
     .parallax {
-        width: 190vw !important;
+        -webkit-transform: translate(-50%, -55%) translateX(0) !important;
+        transform: translate(-50%, -55%) translateX(0) !important;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
     }
-
+    .scissors {
+        top: 55vh !important;
+    }
+    .flap#upper {
+        top: 36vh !important;
+    }
+    .flap#lower {
+        top: 38vh !important;
+    }
     section {
-        min-height: 120px !important;
+        min-height: 140px !important;
     }
-
     .contact_form_container {
-        height: 200px !important;
+        height: 220px !important;
     }
-
     .proizvodi_boxes {
         flex-flow: column nowrap;
         -webkit-flex-flow: column nowrap;
     }
-
     .box {
         height: 100%;
     }
-
     .box:first-of-type {
         background-position-y: 40% !important;
     }
-
     .box:last-of-type {
         background-position-y: 64.7% !important;
     }
-    
     .tipovi_proizvoda_container {
         height: 450px !important;
     }
-
     .proizvodi_boxes {
         height: 85% !important;
         margin-top: 4% !important;
     }
-
     .under_box_content {
         height: 8% !important;
     }
-
     footer {
         min-height: 70px !important;
     }
-
     .footers_footer {
         height: 10px !important;
     }
@@ -184,35 +186,31 @@ nav {
 @media only screen and (min-width: 450px) and (max-width: 800px) {
     /*tablet optimisation break point*/
     .parallax {
-        transform: translate(-50%, -50%) !important;
+        -webkit-transform: translate(-50%, -50%) translateX(0) !important;
+        transform: translate(-50%, -50%) translateX(0) !important;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
     }
-
     section {
         min-height: 400px !important;
     }
-
     .contact_form_container {
         height: auto !important;
     }
-    
     .tipovi_proizvoda_container {
         height: 600px !important;
         padding-top: 5% !important;
     }
-
     .proizvodi_boxes {
         height: 70% !important;
         margin-top: 4% !important;
     }
-
     .under_box_content {
         height: 17.6% !important;
     }
-
     footer {
         min-height: 150px !important;
     }
-
     .footers_footer {
         height: 30px !important;
     }
@@ -234,10 +232,13 @@ nav {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -44%);
+    -webkit-transform: translate(-50%, -44%) translateX(0);
+    transform: translate(-50%, -44%) translateX(0);
     width: 95vw;
     max-width: 1900px;
     z-index: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .parallax~img.package {
@@ -255,6 +256,8 @@ nav {
     top: 35vh;
     width: 16vw;
     transform-origin: 0 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .parallax_text {
@@ -274,6 +277,8 @@ nav {
 .scissors {
     position: absolute;
     width: 19.6vw;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .flap {
@@ -281,6 +286,16 @@ nav {
     left: -5vh;
     height: 6vw;
     transform-origin: top center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flap#upper {
+    top: 38vh;
+}
+
+.flap#lower {
+    top: 41vh;
 }
 
 /* ************************************************NAJSVETLO************************************************* */
@@ -556,7 +571,10 @@ textarea {
     overflow: auto;
 }
 
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder,
+input,
+textarea {
     font-family: 'Chivo-Regular';
     font-weight: 800;
     font-size: 20%;
@@ -830,10 +848,11 @@ footer {
     transform: translate(-50%, -50%);
 }
 
-footer a, footer a:active, footer a:visited {
+footer a,
+footer a:active,
+footer a:visited {
     color: #ffffff;
     text-decoration: none;
-
     transition: all .6s ease-in-out;
 }
 
@@ -870,10 +889,22 @@ footer a:hover {
 
 .info_container {
     padding: 3% 0;
+    height: 50vh;
+    min-height: 300px;
 }
 
 .info_container h1 {
     margin: 0 8%;
     letter-spacing: 20%;
     letter-spacing: .245vw;
+}
+
+table {
+    margin: 5%auto;
+    width: 70%;
+    text-align: center;
+}
+
+th, td {
+    padding: 2%;
 }
