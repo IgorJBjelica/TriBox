@@ -82,17 +82,39 @@ nav {
 }
 
 .navigation a {
-    text-decoration: none;
+    position: relative;
     display: block;
     padding: 1rem;
+    text-decoration: none;
     color: rgb(0, 0, 0);
 }
+
+.navigation a:before {
+    content: '';
+    background: center / contain no-repeat url('images/sajt slike/underline-link.png');
+    position: absolute;
+    width: 80%;
+    height: 10px;
+    bottom: 10px;
+    left: 10%;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
 
 .navigation a:hover,
 .navigation a:focus {
     color: #007dc6;
-    /* text-decoration: wavy underline lime; */
 }
+
+.navigation a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
 
 .logo {
     width: 19%;
@@ -108,23 +130,59 @@ nav {
 
 @media only screen and (max-width: 450px) {
     /*mobile optimisation break point*/
-    .navigation {
-        -webkit-flex-flow: column wrap;
-        flex-flow: column wrap;
-        padding: 0;
+    .parallax {
+        width: 190vw !important;
     }
-    .navigation a {
-        text-align: center;
-        padding: 10px;
-        border-top: 1px solid rgba(255, 255, 255, 0.3);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    section {
+        min-height: 120px !important;
     }
-    .navigation li:last-of-type a {
-        border-bottom: none;
+
+    .contact_form_container {
+        height: 200px !important;
+    }
+
+    .proizvodi_boxes {
+        flex-flow: column nowrap;
+        -webkit-flex-flow: column nowrap;
+    }
+
+    .box {
+        height: 100%;
+    }
+
+    .box:first-of-type {
+        background-position-y: 40% !important;
+    }
+
+    .box:last-of-type {
+        background-position-y: 64.7% !important;
+    }
+    
+    .tipovi_proizvoda_container {
+        height: 450px !important;
+    }
+
+    .proizvodi_boxes {
+        height: 85% !important;
+        margin-top: 4% !important;
+    }
+
+    .under_box_content {
+        height: 8% !important;
+    }
+
+    footer {
+        min-height: 70px !important;
+    }
+
+    .footers_footer {
+        height: 10px !important;
     }
 }
 
 @media only screen and (min-width: 450px) and (max-width: 800px) {
+    /*tablet optimisation break point*/
     .parallax {
         transform: translate(-50%, -50%) !important;
     }
@@ -135,6 +193,28 @@ nav {
 
     .contact_form_container {
         height: auto !important;
+    }
+    
+    .tipovi_proizvoda_container {
+        height: 600px !important;
+        padding-top: 5% !important;
+    }
+
+    .proizvodi_boxes {
+        height: 70% !important;
+        margin-top: 4% !important;
+    }
+
+    .under_box_content {
+        height: 17.6% !important;
+    }
+
+    footer {
+        min-height: 150px !important;
+    }
+
+    .footers_footer {
+        height: 30px !important;
     }
 }
 
@@ -148,7 +228,6 @@ nav {
     overflow: hidden;
     position: fixed;
     top: 15vh;
-    height: 85vh;
 }
 
 .parallax {
@@ -296,11 +375,10 @@ nav {
 }
 
 .zasto_container ul li {
-    line-height: 2.2rem;
+    line-height: 2.7vw;
 }
 
 b {
-    /* font-family: ''; */
     font-size: 130%;
     font-size: 1.595vw;
     font-weight: 800;
@@ -329,8 +407,8 @@ b {
 .floaty_box.first {
     top: 14%;
     left: -3vh;
-    width: 18.5vh !important;
-    height: 18.5vh !important;
+    width: 10vw !important;
+    height: 10vw !important;
     border-radius: 30%;
     transform: rotate(14deg);
 }
@@ -338,8 +416,8 @@ b {
 .floaty_box.second {
     top: 65%;
     left: 8%;
-    width: 25vh !important;
-    height: 25vh !important;
+    width: 13.5vw !important;
+    height: 13.5vw !important;
     border-radius: 20%;
     transform: rotate(-16deg);
     background-color: #007dc6;
@@ -347,9 +425,9 @@ b {
 
 .floaty_box.third {
     top: 85%;
-    right: 40vh;
-    width: 20vh !important;
-    height: 20vh !important;
+    right: 22%;
+    width: 10.7vw !important;
+    height: 10.7vw !important;
     border-radius: 20%;
     transform: rotate(-34deg);
 }
@@ -357,8 +435,8 @@ b {
 .floaty_box.forth {
     top: 25%;
     right: 3%;
-    width: 32vh !important;
-    height: 32vh !important;
+    width: 17.2vw !important;
+    height: 17.2vw !important;
     border-radius: 45%;
     transform: rotate(14deg);
     background-color: #007dc6;
@@ -425,7 +503,7 @@ p.back_text {
     font-size: 2.945;
     letter-spacing: 10%;
     letter-spacing: .12vw;
-    line-height: 3rem;
+    line-height: 3vw;
     width: 49%;
     margin: 14% 0 0 auto;
     color: #ffffff;
@@ -453,7 +531,7 @@ form h2 {
     margin: 0 auto 5%;
     letter-spacing: 5%;
     letter-spacing: .06vw;
-    /* font-family: '' !important; */
+    font-family: 'Chivo-Light' !important;
 }
 
 form p.mini_text {
@@ -466,26 +544,23 @@ form p.mini_text {
 input,
 textarea {
     width: 90%;
-    font-family: '';
-    font-weight: 800;
-    opacity: 1;
     padding: 3% 4%;
     border: 3px solid #4db848;
     margin: 7% auto 3%;
-    color: #000000;
+    font: inherit;
 }
 
 textarea {
     resize: none;
     height: 30%;
     overflow: auto;
-    color: #000000;
-    opacity: 1;
 }
 
-::placeholder {
+input::placeholder, textarea::placeholder {
     font-family: 'Chivo-Regular';
     font-weight: 800;
+    font-size: 20%;
+    font-size: 1vw;
     color: #000000;
     opacity: 1;
 }
@@ -573,6 +648,11 @@ h1 img {
     color: #ffffff;
 }
 
+.box:nth-child(2) .box_content b {
+    vertical-align: top;
+    transform: translateY(15%);
+}
+
 /* .inner_box_content {
     position: table-row;
     width: 100%;
@@ -586,7 +666,8 @@ h1 img {
     right: 20%;
     transform: translateY(-50%);
     margin: auto;
-    /* font-size: 1.4rem; */
+    font-family: 'Chivo-Regular', Helvetica, sans-serif;
+    font-size: 1.4vw;
 }
 
 .under_box_content {
@@ -656,7 +737,8 @@ h1 img {
 footer {
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 23vw;
+    min-height: 300px;
     color: #ffffff;
     background-color: #007dc6;
 }
@@ -707,13 +789,15 @@ footer {
     /* margin: 0 auto; */
     padding: 0;
     width: min-content;
-    line-height: 2rem;
+    line-height: 200%;
+    line-height: 2.5vw;
     list-style: none;
     text-align: left;
 }
 
 .flex_footer .content_strip:nth-child(2) ul li:nth-child(n+2) {
-    line-height: 1.2rem;
+    line-height: 120%;
+    line-height: 1.5vw;
 }
 
 .flex_footer .content_strip ul li:nth-child(1),
@@ -744,6 +828,17 @@ footer {
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+footer a, footer a:active, footer a:visited {
+    color: #ffffff;
+    text-decoration: none;
+
+    transition: all .6s ease-in-out;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 /* **************************************************KONTAKT************************************************ */
