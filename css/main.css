@@ -1,3 +1,13 @@
+*,
+:before,
+:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
 @font-face {
     font-family: 'Caviar-Dreams';
     src: url('../fonts/Caviar-Dreams.ttf.woff') format('woff'), url('../fonts/Caviar-Dreams.ttf.svg#Caviar-Dreams') format('svg'), url('../fonts/Caviar-Dreams.ttf.eot'), url('../fonts/Caviar-Dreams.ttf.eot?#iefix') format('embedded-opentype');
@@ -91,19 +101,17 @@ nav {
 
 .navigation a:before {
     content: '';
-    background: center / contain no-repeat url('images/sajt slike/underline-link.png');
+    background: center / contain no-repeat url('images/underline-link.png');
     position: absolute;
     width: 80%;
     height: 10px;
     bottom: 10px;
     left: 10%;
     visibility: hidden;
-    -webkit-transform: scaleX(0) translateX(0);
-    transform: scaleX(0) translateX(0);
-    -webkit-transition: transform 0.3s ease-in-out 0s;
-    transition: transform 0.3s ease-in-out 0s;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
 }
 
 .navigation a:hover,
@@ -131,14 +139,40 @@ nav {
 
 @media only screen and (max-width: 450px) {
     /*mobile optimisation break point*/
+    body {
+        font-size: 3vw !important;
+    }
+    .logo {
+        width: 40% !important;
+    }
+    .navigation {
+        padding: 0 !important;
+    }
+    .navigation a {
+        padding: .41rem !important;
+    }
     .parallax {
-        -webkit-transform: translate(-50%, -55%) translateX(0) !important;
-        transform: translate(-50%, -55%) translateX(0) !important;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
+        width: 165vw !important;
+        -webkit-transform: translate(-50%, -55%) !important;
+        transform: translate(-50%, -55%) !important;
+    }
+    .parallax_text h1 {
+        width: 76vw !important;
+        /* font-size: 268% !important; */
+        font-size: 7vw !important;
+    }
+    .parallax_text p {
+        font-size: 3.6vw !important;
+    }
+    .parallax~img.text_box[invisible='1'] {
+        visibility: hidden !important;
+    }
+    .parallax~img.package {
+        width: 50vw !important;
     }
     .scissors {
         top: 55vh !important;
+        width: 34.6vw !important;
     }
     .flap#upper {
         top: 36vh !important;
@@ -147,7 +181,69 @@ nav {
         top: 38vh !important;
     }
     section {
-        min-height: 140px !important;
+        min-height: 300px !important;
+    }
+    .svetlo_container .content .text {
+        right: 7% !important;
+        width: 77% !important;
+    }
+    b {
+        font-size: 120% !important;
+        font-size: 3.596vw !important;
+    }
+    .text p {
+        width: 100% !important;
+        font-size: 400% !important;
+        font-size: 3.8vw !important;
+    }
+    .back_content {
+        width: 87% !important;
+        right: 3% !important;
+    }
+    p.back_text {
+        line-height: 4.5vw !important;
+        font-size: 3.945vw !important;
+    }
+    form h2 {
+        font-size: 2.8vw !important;
+    }
+    form p.mini_text {
+        /* font-size: 74.62% !important; */
+        font-size: 2.8vw !important;
+    }
+    input::placeholder,
+    textarea::placeholder,
+    input,
+    textarea {
+        font-size: .62rem !important;
+        font-size: 2.3vw !important;
+    }
+    .zasto_container .floaty_box {
+        opacity: .7;
+    }
+    .floaty_box.second {
+        left: 4% !important;
+    }
+    .floaty_box.third {
+        top: 90% !important;
+        right: 17% !important;
+    }
+    .zasto_container ul {
+        width: 100% !important;
+        font-size: 4vw !important;
+    }
+    .zasto_container ul li {
+        line-height: 4.6vw !important;
+    }
+    .tirazi_container .content .text {
+        right: 8% !important;
+        width: 77% !important;
+    }
+    /* ---------------------------------------------- */
+    .text h1 {
+        /* font-size: 400%; */
+        font-size: 6.1vw !important;
+        width: 98% !important;
     }
     .contact_form_container {
         height: 220px !important;
@@ -165,37 +261,108 @@ nav {
     .box:last-of-type {
         background-position-y: 64.7% !important;
     }
+    .tipovi_proizvoda_container .text h1 {
+        width: 80% !important;
+    }
     .tipovi_proizvoda_container {
-        height: 450px !important;
+        height: 550px !important;
     }
     .proizvodi_boxes {
-        height: 85% !important;
+        height: 80% !important;
         margin-top: 4% !important;
+    }
+    .inner_box_content p {
+        top: 60% !important;
     }
     .under_box_content {
         height: 8% !important;
     }
+    .under_box_content p {
+        left: 13% !important;
+        right: 10% !important;
+        font-size: 2.92vw !important;
+    }
     footer {
-        min-height: 70px !important;
+        height: 35vw !important;
+        min-height: 170px !important;
+    }
+    .flex_footer .content_strip {
+        width: 30.5% !important;
+        height: 85% !important;
+    }
+    .flex_footer .content_strip ul {
+        line-height: 6.5vw !important;
+    }
+    .flex_footer .content_strip:nth-child(2) ul li:nth-child(n+2) {
+        /* line-height: 120%; */
+        line-height: 3.2vw !important;
     }
     .footers_footer {
-        height: 10px !important;
+        height: 20px !important;
+    }
+    .footers_footer span {
+        width: 54% !important;
     }
 }
 
 @media only screen and (min-width: 450px) and (max-width: 800px) {
     /*tablet optimisation break point*/
+    body {
+        font-size: 1.9vw !important;
+    }
     .parallax {
-        -webkit-transform: translate(-50%, -50%) translateX(0) !important;
-        transform: translate(-50%, -50%) translateX(0) !important;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
+        -webkit-transform: translate(-50%, -50%) !important;
+        transform: translate(-50%, -50%) !important;
+    }
+    .parallax_text h1 {
+        width: 60vw !important;
+        font-size: 268% !important;
+        font-size: 5.36vw !important;
     }
     section {
         min-height: 400px !important;
     }
+    .svetlo_container .content .text {
+        right: 18% !important;
+        width: 65% !important;
+    }
+    b {
+        font-size: 130% !important;
+        font-size: 2.596vw !important;
+    }
+    .text p {
+        font-size: 400% !important;
+        font-size: 2.4vw !important;
+    }
     .contact_form_container {
         height: auto !important;
+    }
+    p.back_text {
+        font-size: 2.945vw !important;
+    }
+    form h2 {
+        font-size: 1.94vw !important;
+    }
+    form p.mini_text {
+        font-size: 74.62% !important;
+        font-size: 1.42vw !important;
+    }
+    input::placeholder,
+    textarea::placeholder,
+    input,
+    textarea {
+        font-size: .62rem !important;
+        font-size: 1.3vw !important;
+    }
+    .zasto_container ul {
+        font-size: 2vw !important;
+    }
+    .zasto_container ul li {
+        line-height: 3.2vw !important;
+    }
+    .tirazi_container .content .text {
+        right: 18% !important;
+        width: 65% !important;
     }
     .tipovi_proizvoda_container {
         height: 600px !important;
@@ -206,10 +373,24 @@ nav {
         margin-top: 4% !important;
     }
     .under_box_content {
-        height: 17.6% !important;
+        height: 17% !important;
+    }
+    .under_box_content p {
+        font-size: 2.3vw !important;
     }
     footer {
         min-height: 150px !important;
+    }
+    .flex_footer .content_strip {
+        width: 30.5% !important;
+        height: 85% !important;
+    }
+    .flex_footer .content_strip ul {
+        line-height: 3.5vw !important;
+    }
+    .flex_footer .content_strip:nth-child(2) ul li:nth-child(n+2) {
+        /* line-height: 120%; */
+        line-height: 2.2vw !important;
     }
     .footers_footer {
         height: 30px !important;
@@ -232,13 +413,11 @@ nav {
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -44%) translateX(0);
-    transform: translate(-50%, -44%) translateX(0);
+    -webkit-transform: translate(-50%, -44%);
+    transform: translate(-50%, -44%);
     width: 95vw;
     max-width: 1900px;
     z-index: 0;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
 }
 
 .parallax~img.package {
@@ -256,13 +435,12 @@ nav {
     top: 35vh;
     width: 16vw;
     transform-origin: 0 0;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+    visibility: visible;
 }
 
 .parallax_text {
     position: absolute;
-    width: 40vw;
+    width: 45vw;
     font-weight: 800;
     color: #554b4a;
 }
@@ -277,8 +455,6 @@ nav {
 .scissors {
     position: absolute;
     width: 19.6vw;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
 }
 
 .flap {
@@ -286,8 +462,6 @@ nav {
     left: -5vh;
     height: 6vw;
     transform-origin: top center;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
 }
 
 .flap#upper {
@@ -301,7 +475,7 @@ nav {
 /* ************************************************NAJSVETLO************************************************* */
 
 .svetlo_container {
-    background: 0 63% / cover no-repeat url('images/sajt slike/pexels-photo-709848.jpeg');
+    background: 0 63% / cover no-repeat url('images/pexels-photo-709848.jpeg');
     transition: all .6s ease-in-out;
 }
 
@@ -464,7 +638,7 @@ b {
 }
 
 .tirazi_container {
-    background: 0 38% / cover no-repeat url('images/sajt slike/pexels-photo-296878.jpeg');
+    background: 0 38% / cover no-repeat url('images/pexels-photo-296878.jpeg');
     transition: all .6s ease-in-out;
 }
 
@@ -499,7 +673,7 @@ b {
     width: 100%;
     height: 600px;
     font-family: 'Chivo-Light' !important;
-    background: 0 70% / cover no-repeat url('images/sajt slike/leone-venter-469710-unsplash.jpg');
+    background: 0 70% / cover no-repeat url('images/leone-venter-469710-unsplash.jpg');
 }
 
 .back_content {
@@ -515,7 +689,7 @@ b {
 p.back_text {
     font-weight: bold;
     font-size: 240%;
-    font-size: 2.945;
+    font-size: 2.945vw;
     letter-spacing: 10%;
     letter-spacing: .12vw;
     line-height: 3vw;
@@ -624,15 +798,15 @@ h1 img {
 }
 
 .box:nth-child(1) {
-    background: center / cover no-repeat url('images/sajt slike/IMG1.jpg');
+    background: center / cover no-repeat url('images/IMG1.jpg');
 }
 
 .box:nth-child(2) {
-    background: 0 33% / cover no-repeat url('images/sajt slike/IMG2.jpg');
+    background: 0 33% / cover no-repeat url('images/IMG2.jpg');
 }
 
 .box:nth-child(3) {
-    background: center / cover no-repeat url('images/sajt slike/IMG3.jpg');
+    background: center / cover no-repeat url('images/IMG3.jpg');
 }
 
 .proizvodi_boxes .box:hover {
@@ -671,21 +845,14 @@ h1 img {
     transform: translateY(15%);
 }
 
-/* .inner_box_content {
-    position: table-row;
-    width: 100%;
-    height: 30%;
-} */
-
 .inner_box_content p {
     position: absolute;
     top: 50%;
-    left: 20%;
-    right: 20%;
+    left: 12%;
+    right: 10%;
     transform: translateY(-50%);
     margin: auto;
     font-family: 'Chivo-Regular', Helvetica, sans-serif;
-    font-size: 1.4vw;
 }
 
 .under_box_content {
@@ -905,6 +1072,7 @@ table {
     text-align: center;
 }
 
-th, td {
+th,
+td {
     padding: 2%;
 }
