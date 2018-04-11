@@ -11,12 +11,5 @@
             "sourceMaps": false,
             "file": "${workspaceFolder}/index.html"
         },
-        {
-            "name": "Launch localhost",
-            "type": "chrome",
-            "request": "launch",
-            "url": "http://localhost/mypage.html",
-            "webRoot": "${workspaceFolder}/wwwroot"
-        },
     ]
 }
