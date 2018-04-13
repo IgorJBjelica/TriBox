@@ -78,7 +78,7 @@
             data-350="transform: rotate(0) translate3d(0,0,0); top: 20vh; left: 65vw;" data-1100="transform: rotate(0) translate3d(0,0,0); top: 20vh; left: 65vw;"
             data-1200="transform: rotate(0) translate3d(0,0,0); top: 20vh; left: 120vw;" src="css/images/a-box.png" />
         <img class="scissors" data-0="left: 51.5vw; top: 70.5vh; transform: rotate(0deg);" data-300="left: 90%; top: 76vh; transform: rotate(380deg);"
-            data-1000="left: -19%; top: 76vh; transform: rotate(380deg);" data-1300="left: -39%; top: 76vh; transform: rotate(380deg);"
+            data-1000="left: 10%; top: 76vh; transform: rotate(380deg);" data-1300="left: -21%; top: 76vh; transform: rotate(380deg);"
             src="css/images/makaze.png" />
     </section>
 
@@ -143,9 +143,10 @@
                 <br>TU SMO ZBOG VAS.
             </p>
 
-            <form>
+            <form role="form" id="emailform" method="POST">
                 <div class="form_content">
                     <h2>KONTAKTIRAJTE&nbsp;NAS</h2>
+                    <p id="msg"></p>
                     <input type="text" name="ime" placeholder="IME" />
                     <input type="tel" name="telefon" placeholder="TELEFON" />
                     <p class="mini_text">
@@ -153,7 +154,8 @@
                         <br> Zatvoreni vikendom osim za posebne usluge
                     </p>
                     <input type="email" name="email" placeholder="EMAIL" />
-                    <textarea name="poruka" placeholder="PORUKA"></textarea>
+                    <textarea name="description" placeholder="PORUKA"></textarea>
+                    <button id="send" type="button">SEND</button>
                 </div>
             </form>
         </div>
@@ -375,8 +377,26 @@
                 });
         });
 
-        $('section').on('click', function (event) {
-            $(this).children('.content').addClass('slide_in');
+        $(function () {
+            var fullUrl = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port :
+                '');
+            $("#send").click(function () {
+                var formData = $("emailForm").serialize();
+                $.ajax({
+                    url: fullUrl + '/send',
+                    type: 'POST',
+                    data: formData,
+                    success: function (result) {
+                        $("#msg").empty().text(result);
+                    },
+                    error: function (e) {
+                        $("#msg").empty().text("An error has occured, Error code: " + e.status +
+                            ", Error message: " + e.statusText);
+                    },
+                    dataType: "html",
+                    timeout: 60000
+                });
+            });
         });
 
         $('.proizvodi_boxes:nth-child(2)').hover(function () {

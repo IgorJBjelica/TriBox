@@ -29,8 +29,8 @@ app.post('/send', function(req, res) {
         secureConnection: true, //use SSL
         port: 465, //port for secure SMTP
             auth: {
-                user: '',
-                pass: ''
+                user: 'porukesajt@gmail.com',
+                pass: 'passvord'
             }
     });
 
