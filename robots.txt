@@ -1,0 +1,10 @@
+User-Agent: *
+Disallow: 
+Disallow: /node_modules
+Disallow: /css/images
+Disallow: /fonts
+
+User-Agent: Googlebot-Image
+Allow: /css/imges
+
+Sitemap: http://www.tribox.rs/sitemap.xml

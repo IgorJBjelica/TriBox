@@ -356,7 +356,8 @@ nav {
     input::placeholder,
     textarea::placeholder,
     input,
-    textarea {
+    textarea,
+    button {
         font-size: .62rem !important;
         font-size: 2.3vw !important;
     }
@@ -382,7 +383,7 @@ nav {
         width: 77% !important;
     }
     /* ---------------------------------------------- */
-    .text h1 {
+    .text h2 {
         /* font-size: 400%; */
         font-size: 6.1vw !important;
         width: 98% !important;
@@ -403,7 +404,7 @@ nav {
     .box:last-of-type {
         background-position-y: 64.7% !important;
     }
-    .tipovi_proizvoda_container .text h1 {
+    .tipovi_proizvoda_container .text h2 {
         width: 80% !important;
     }
     .tipovi_proizvoda_container {
@@ -444,6 +445,10 @@ nav {
     }
     .footers_footer span {
         width: 54% !important;
+    }
+    table {
+        float: none !important;
+        width: 70% !important;
     }
 }
 
@@ -492,7 +497,8 @@ nav {
     input::placeholder,
     textarea::placeholder,
     input,
-    textarea {
+    textarea,
+    button {
         font-size: .62rem !important;
         font-size: 1.3vw !important;
     }
@@ -541,7 +547,7 @@ nav {
 
 @media only screen and (min-width: 1450px) {
     /*desktop optimisation break point*/
-    .text h1 {
+    .text h2 {
         font-size: 4.8vw !important;
     }
     p.back_text {
@@ -659,7 +665,7 @@ nav {
     width: 16vw;
 }
 
-.text h1 {
+.text h2 {
     font-size: 400%;
     font-size: 4.9vw;
     font-weight: bold;
@@ -699,8 +705,8 @@ nav {
     height: auto;
 }
 
-.zasto_container h1,
-.tipovi_proizvoda_container h1 {
+.zasto_container h2,
+.tipovi_proizvoda_container h2 {
     /* width: 71%; */
     margin: 0 auto;
 }
@@ -859,7 +865,7 @@ form {
     top: 8%;
     bottom: -50%;
     left: 5%;
-    right: 53%;
+    right: 56%;
     background-color: #ffffff;
 }
 
@@ -887,30 +893,44 @@ form p.mini_text {
 }
 
 input,
-textarea {
-    width: 90%;
+textarea,
+button {
+    width: 100%;
     padding: 3% 4%;
     border: 3px solid #4db848;
-    margin: 7% auto 3%;
+    margin: 5% auto 2%;
     font: inherit;
 }
 
 textarea {
     resize: none;
-    height: 30%;
+    height: 25%;
     overflow: auto;
 }
 
 input::placeholder,
 textarea::placeholder,
 input,
-textarea {
+textarea,
+button {
     font-family: 'Chivo-Regular';
     font-weight: 800;
     font-size: 20%;
     font-size: 1vw;
     color: #000000;
     opacity: 1;
+}
+
+button {
+    /* margin-top: 1%; */
+    background-color: white;
+    cursor: pointer;
+
+    transition: all .8s ease-in-out;
+}
+
+button:hover {
+    background-color: #4eb84850;
 }
 
 /* *********************************************TIPOVI PROIZVODA******************************************** */
@@ -922,11 +942,11 @@ textarea {
     background-color: #ffffff;
 }
 
-.tipovi_proizvoda_container h1 {
+.tipovi_proizvoda_container h2 {
     position: relative;
 }
 
-h1 img {
+h2 img {
     position: absolute;
     display: block;
     width: 45vw;
@@ -971,7 +991,7 @@ h1 img {
 
 .proizvodi_boxes .box:hover>.box_content {
     visibility: visible;
-    opacity: .8;
+    opacity: 1;
 }
 
 .box_content {
@@ -1217,7 +1237,7 @@ footer a:hover {
     min-height: 300px;
 }
 
-.info_container h1 {
+.info_container h2 {
     margin: 0 8%;
     letter-spacing: 20%;
     letter-spacing: .245vw;
@@ -1225,7 +1245,8 @@ footer a:hover {
 
 table {
     margin: 5%auto;
-    width: 70%;
+    width: 45%;
+    float: left;
     text-align: center;
 }
 
@@ -1234,7 +1255,7 @@ td {
     padding: 2%;
 }
 
-/* ***************************************************INFO************************************************** */
+/* ***************************************************INPROGRESS************************************************** */
 
 .in_content {
     position: absolute;
