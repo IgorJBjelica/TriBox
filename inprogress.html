@@ -9,6 +9,8 @@
     <link rel="manifest" href="/css/images/sajt slike/site.webmanifest">
     <link rel="mask-icon" href="/css/images/sajt slike/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="canonical" href="https://www.tribox.rs" />
+    <link rel="alternate" href="https://www.tribox.rs/en/inprogress.html" hreflang="en" />
+    <link rel="alternate" href="https://www.tribox.rs/inprogress.html" hreflang="sr" />
     <meta name="description" content="Ova strana je trenutno u izradi. Hvala Vam na strpljenju!">
     <meta name="keywords" content="Kutije, Beograd, proizvodnja, izrada, karton, kartonske kutije, kartonska ambalaza, ambalaza, valoviti karton, valovita lepenka, stanc, tigl, stanc alat, alat, alat za proizvodnju ambalaze, alat za proizvodnju kutije, alat za kutije, pakovanje, paket, kutije za flase, kutije za pakovanje, luksuzne kutije, mala serija kutija, promotivna ambalaza">
     <meta name="msapplication-TileColor" content="#da532c">
@@ -25,7 +27,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>U izradi | TriBox Solutions | Kutije po Vašoj meri</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css?version=22" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css?version=26" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
     <!-- <link rel="preload" href="../fonts/CaviarDreams-webfont.woff" as="font"> -->
@@ -35,19 +37,26 @@
     <nav>
         <div class="container">
             <div class="logo">
-                <a href="index.html">
+                <a href="index.php">
                     <img id="logo" src="css/images/[TEMP]Logo.gif" style="max-width: 270px;">
                 </a>
             </div>
             <ul class="navigation">
                 <li>
-                    <a href="index.html">O&nbsp;NAMA</a>
+                    <a href="index.php">O&nbsp;NAMA</a>
                 </li>
                 <li>
-                    <a>GALERIJA</a>
+                    <a class="active" href="#">GALERIJA</a>
                 </li>
                 <li>
-                    <a href="#">KONTAKT</a>
+                    <a href="kontakt.html">KONTAKT</a>
+                </li>
+                <li class="jezik">
+                    <a href="#">RS</a>
+                </li>
+                <li class="jezik" id="trtica">|</li>
+                <li class="jezik">
+                    <a href="/en/index.html">EN</a>
                 </li>
             </ul>
         </div>
@@ -60,6 +69,12 @@
                 <br> POSTAVLJENA</p>
         </div>
     </section>
+
+    <div class="footers_footer">
+        <div>
+            <span>2018 Designed by Firefly Web Studio.</span>
+        </div>
+    </div>
 </body>
 
 </html>

@@ -9,8 +9,8 @@
     <link rel="manifest" href="/css/images/site.webmanifest">
     <link rel="mask-icon" href="/css/images/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="canonical" href="https://www.tribox.rs" />
-    <meta name="description" content="TriBox Solutions je vedeća firma u oblasti proizvodnje alata za izradu kartona, u izradi kartonske ambalaže uključujući izradu i od valovitog kartona kao i izradu samog valovitog kartona. Sa sedištem u Beogradu stojimo Vam na raspolaganju za izradu kutija po Vašoj meri.">
-    <meta name="keywords" content="Kutije, Beograd, proizvodnja, izrada, karton, kartonske kutije, kartonska ambalaza, ambalaza, valoviti karton, valovita lepenka, stanc, tigl, stanc alat, alat, alat za proizvodnju ambalaze, alat za proizvodnju kutije, alat za kutije, pakovanje, paket, kutije za flase, kutije za pakovanje, luksuzne kutije, mala serija kutija, promotivna ambalaza">
+    <meta name="description" content="TriBox Solutions, jedna od vedećih firmi u oblasti proizvodnje alata za izradu kartona, u izradi kartonske ambalaže uključujući izradu i od valovitog kartona kao i proizvodnja samog valovitog kartona. Sa sedištem u Beogradu stojimo Vam na raspolaganju za izradu kutija po Vašoj meri.">
+    <meta name="keywords" content="Kutije, Beograd, proizvodnja, izrada, karton, kartonske kutije, kartonska ambalaza, ambalaza, proizvodnja ambalaže, valoviti karton, valovita lepenka, stanc, tigl, stanc alat, alat, alat za proizvodnju ambalaze, alat za proizvodnju kutije, alat za kutije, pakovanje, paket, kutije za flase, kutije za pakovanje, luksuzne kutije, mala serija kutija, promotivna ambalaza">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
@@ -20,13 +20,13 @@
     <meta property="og:site_name" content="TriBox">
     <meta property="og:image" content="css/images/[TEMP]Logo.gif">
     <meta property="og:title" content="TriBox Solutions | Kutije po Vašoj meri">
-    <meta property="og:description" content="TriBox Solutions je vedeća firma u oblasti proizvodnje alata za izradu kartona, u izradi kartonske ambalaže uključujući izradu i od valovitog kartona kao i izradu samog valovitog kartona. Sa sedištem u Beogradu stojimo Vam na raspolaganju za izradu kutija po Vašoj meri.">
+    <meta property="og:description" content="TriBox Solutions, jedna od vedećih firmi u oblasti proizvodnje alata za izradu kartona, u izradi kartonske ambalaže uključujući izradu i od valovitog kartona kao i proizvodnja samog valovitog kartona. Sa sedištem u Beogradu stojimo Vam na raspolaganju za izradu kutija po Vašoj meri.">
     <meta http-equiv="Content-Language" content="sr" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>TriBox Solutions - Kutije po Vasoj meri</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css?version=22" />
-    <link rel="prefetch" href="/css/images/home.png">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css?version=26" />
+    <!-- <link rel="prefetch" href="/css/images/home.png"> -->
 </head>
 
 <body id="skrollr-body">
@@ -40,13 +40,13 @@
         data-1300="opacity: 0; visibility: hidden;">
         <div class="container">
             <div class="logo">
-                <a href="index.html">
+                <a href="index.php">
                     <img alt="TriBox Solutions logo" id="logo" src="css/images/[TEMP]Logo.gif" style="max-width: 270px;">
                 </a>
             </div>
             <ul class="navigation">
                 <li>
-                    <a href="index.html">O&nbsp;NAMA</a>
+                    <a class="active" href="index.php">O&nbsp;NAMA</a>
                 </li>
                 <li>
                     <a href="inprogress.html">GALERIJA</a>
@@ -54,10 +54,17 @@
                 <li>
                     <a href="kontakt.html">KONTAKT</a>
                 </li>
+                <li class="jezik">
+                    <a class="active" href="#">RS</a>
+                </li>
+                <li class="jezik" id="trtica">|</li>
+                <li class="jezik">
+                    <a href="../Website/en/index.html">EN</a>
+                </li>
             </ul>
         </div>
     </nav>
-    <section class="parallax_container" data-0="visibility: visible;" data-1200="visibility: visible;" data-1300="visibility: hidden;"
+    <section class="parallax_container" data-0="visibility: visible;" data-1200="visibility: visible;" data-1500="visibility: hidden;"
         data-1200="height: 0;">
 
         <div class="parallax_text" data-0="left: -120vw; top: 20vh; transform: scale(0);" data-700="left: -20vw; top: 20vh; transform: scale(0);"
@@ -67,8 +74,8 @@
 
             <h1>LUKSUZNE KUTIJE VISOKOG KVALITETA</h1>
             <p>
-                Tribox solutions d.o.o. je preduzeće za proizvodnju kartonske ambalaže osnovano 2014. godine. Naš tim ima dugogodišnje iskustvo
-                u svim procesima dobijanja savršene kutije za Vaše potrebe. Ono što nas izdvaja od ostalih je samostalna
+                Tribox solutions d.o.o. preduzeće proizvodi kartonske ambalaže od 2014. godine. Naš tim ima dugogodišnje iskustvo
+                u svim procesima dobijanja savršene kutije za Vaše potrebe. Ono što nas dodatno izdvaja od ostalih nije samo kvalitet već i samostalna
                 proizvodnja valovitog kartona izuzetnog kvaliteta
             </p>
         </div>
@@ -84,8 +91,10 @@
             data-500="transform: rotate(0); left: -8vw; @invisible: 0;" data-1200="transform: rotate(0); left: -8vw; @invisible: 0;"
             data-1300="transform: rotate(0); left: -18vw; @invisible: 0;" src="css/images/pack-box.png" />
         <img alt="Luksuzno pakovanje" class="package" data-0="transform: rotate(-16deg) translate3d(0,0,0); top: 35vh; left: 30vw" data-200="transform: rotate(0) translate3d(0,0,0); top: 20vh; left: 40vw;"
-            data-350="transform: rotate(0) translate3d(0,0,0); top: 20vh; left: 65vw;" data-1100="transform: rotate(0) translate3d(0,0,0); top: 20vh; left: 65vw;"
-            data-1200="transform: rotate(0) translate3d(0,0,0); top: 20vh; left: 120vw;" src="css/images/a-box.png" />
+            data-350="transform: rotate(0) translate3d(0,0,0); top: 20vh; left: 65vw;" data-1000="transform: rotate(0) translate3d(0,0,0); top: 20vh; left: 65vw;"
+            data-1100="transform: rotate(0) translate3d(0,0,0); top: 10vh; left: 30vw;" data-1200="transform: rotate(0) translate3d(0,0,0); top: 20vh; left: 30vw;"
+            data-1300="transform: rotate(0) translate3d(0,0,0); top: 10vh; left: 30vw;" data-1400="transform: rotate(0) translate3d(0,0,0); top: -20vh; left: 30vw;"
+            data-1500="transform: rotate(0) translate3d(0,0,0); top: -40vh; left: 30vw;" src="css/images/a-box.png" />
         <img alt="Alat za pravljenje kutija" class="scissors" data-0="left: 51.5vw; top: 70.5vh; transform: rotate(0deg);" data-300="left: 90%; top: 76vh; transform: rotate(380deg);"
             data-1000="left: 10%; top: 76vh; transform: rotate(380deg);" data-1300="left: -21%; top: 76vh; transform: rotate(380deg);"
             src="css/images/makaze.png" />
@@ -118,7 +127,7 @@
                     <br>
                     <span class="green">EKO</span> KARTONSKA AMBALAŽA?</h2>
                 <div>
-                    <b>OVO JE PET KLJUČNIH RAZLOGA:</b>
+                    <b>EVO PET KLJUČNIH RAZLOGA:</b>
                 </div>
                 <ul>
                     <li>SAČUVAJTE PROIZVOD OD BILO KAKVOG OŠTEĆENJA</li>
@@ -138,7 +147,7 @@
                 <h2>MALI TIRAŽI</h2>
                 <img alt="Valovita linija" class="wavy_line_green" src="css/images/section1-line.png" />
                 <p>
-                    Ukoliko se spremate za kratku prezentaciju ili promociju za koju vam je potrebam luksuzan i jedinstven izgled pakovanja a
+                    Ukoliko se spremate za kratku prezentaciju ili promociju za koju su vam potrebni luksuzani i jedinstveni izgledi pakovanja a
                     opet manji broj kutija tu smo za vas jer razumemo svaku potrebu poslovanja.
                 </p>
             </div>
@@ -190,8 +199,8 @@
                     <b>Izrada štanci</b>
                     <div class="inner_box_content">
                         <p>
-                            Izrada alata za oblikovanje kutije je jedan od ključnih koraka u proizvodnji. Pravilno izračunate dimenzije i izrađen alat
-                            je proces kojem posvećujemo posebnu pažnju.
+                            Izrada alata za oblikovanje kutije ističe se kao ključni korak u proizvodnji. Procesu pravilno izračunatih dimenzija i izrade alata 
+                            posvećujemo posebnu pažnju.
                         </p>
                     </div>
                 </div>

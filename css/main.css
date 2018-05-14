@@ -1,34 +1,50 @@
+#loader::after,
+#loader::before,
+.floaty_box,
+.navigation a:before {
+    content: ''
+}
+
+#loader::after,
+#loader::before {
+    position: absolute
+}
+
+#logo,
+.box_content b,
+.logo {
+    vertical-align: middle
+}
+
 *,
-:before,
-:after {
+:after,
+:before {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+    backface-visibility: hidden
 }
 
 @font-face {
-    font-family: 'Caviar-Dreams';
-    src: url('../fonts/Caviar-Dreams.ttf.woff') format('woff'), url('../fonts/Caviar-Dreams.ttf.svg#Caviar-Dreams') format('svg'), url('../fonts/Caviar-Dreams.ttf.eot'), url('../fonts/Caviar-Dreams.ttf.eot?#iefix') format('embedded-opentype');
+    font-family: Caviar-Dreams;
+    src: url(../fonts/Caviar-Dreams.ttf.woff) format('woff'), url(../fonts/Caviar-Dreams.ttf.svg#Caviar-Dreams) format('svg'), url(../fonts/Caviar-Dreams.ttf.eot), url(../fonts/Caviar-Dreams.ttf.eot?#iefix) format('embedded-opentype')
 }
 
 @font-face {
-    font-family: 'Chivo-Light';
-    src: url('../fonts/Chivo-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Chivo-Light.woff2') format('woff2'), url('../fonts/Chivo-Light.woff') format('woff');
+    font-family: Chivo-Light;
+    src: url(../fonts/Chivo-Light.eot?#iefix) format('embedded-opentype'), url(../fonts/Chivo-Light.woff2) format('woff2'), url(../fonts/Chivo-Light.woff) format('woff')
 }
 
 @font-face {
-    font-family: 'Chivo-Regular';
-    src: url('../fonts/Chivo-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Chivo-Regular.woff2') format('woff2'), url('../fonts/Chivo-Regular.woff') format('woff');
+    font-family: Chivo-Regular;
+    src: url(../fonts/Chivo-Regular.eot?#iefix) format('embedded-opentype'), url(../fonts/Chivo-Regular.woff2) format('woff2'), url(../fonts/Chivo-Regular.woff) format('woff')
 }
 
 @font-face {
-    font-family: 'Chivo-Bold';
-    src: url('../fonts/Chivo-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Chivo-Bold.woff2') format('woff2'), url('../fonts/Chivo-Bold.woff') format('woff');
+    font-family: Chivo-Bold;
+    src: url(../fonts/Chivo-Bold.eot?#iefix) format('embedded-opentype'), url(../fonts/Chivo-Bold.woff2) format('woff2'), url(../fonts/Chivo-Bold.woff) format('woff')
 }
-
-/* **************************************************LOADER***************************************** */
 
 #loader_wrapper {
     position: fixed;
@@ -36,7 +52,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1000;
+    z-index: 1000
 }
 
 #loader {
@@ -50,16 +66,12 @@
     border-radius: 50%;
     border: 3px solid transparent;
     border-top-color: #007dc6;
-
-    -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-    animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
-
-    z-index: 1001;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    z-index: 1001
 }
 
 #loader::before {
-    content: '';
-    position: absolute;
     top: 5px;
     left: 5px;
     right: 5px;
@@ -67,24 +79,20 @@
     border-radius: 50%;
     border: 3px solid transparent;
     border-top-color: #4db848;
-
-    -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-    animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite
 }
 
 #loader::after {
-    content: '';
-    position: absolute;
     top: 15px;
     left: 15px;
     right: 15px;
     bottom: 15px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: #ffffff;
-
-    -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-    animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    border-top-color: #fff;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite
 }
 
 #loader_wrapper .loader_section {
@@ -93,89 +101,80 @@
     width: 51%;
     height: 100%;
     background: #607D8B;
-    z-index: 1000;
+    z-index: 1000
 }
 
 #loader_wrapper .loader_section.section_left {
-    left: 0;
+    left: 0
 }
 
 #loader_wrapper .loader_section.section_right {
-    right: 0;
+    right: 0
 }
 
-/* LOADED */
-
 .loaded #loader_wrapper .loader_section.section_left {
-    -webkit-transform: translateX(-100%); /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: translateX(-100%); /* IE 9 */
-    transform: translateX(-100%); /* Firefox 16+, IE 10+, Opera */
-    
-    -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
-    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition: all .7s .3s cubic-bezier(.645, .045, .355, 1);
+    transition: all .7s .3s cubic-bezier(.645, .045, .355, 1)
 }
 
 .loaded #loader_wrapper .loader_section.section_right {
-    -webkit-transform: translateX(100%); /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: translateX(100%); /* IE 9 */
-    transform: translateX(100%); /* Firefox 16+, IE 10+, Opera */
-    
-    -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
-    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-transition: all .7s .3s cubic-bezier(.645, .045, .355, 1);
+    transition: all .7s .3s cubic-bezier(.645, .045, .355, 1)
 }
 
 .loaded #loader {
     opacity: 0;
-
-    -webkit-transition: all 0.3s ease-out;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
-    transition: all 0.3s ease-out;  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out
 }
 
 .loaded #loader_wrapper {
     visibility: hidden;
-
-    -webkit-transform: translateY(100%); /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: translateY(100%); /* IE 9 */
-    transform: translateY(100%); /* Firefox 16+, IE 10+, Opera */
-
-    -webkit-transition: all 0.3s 1s ease-out;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
-    transition: all 0.3s 1s ease-out;  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+    -webkit-transition: all .3s 1s ease-out;
+    transition: all .3s 1s ease-out
 }
 
 @-webkit-keyframes spin {
     0% {
-        -webkit-transform: rotate(0deg); /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(0deg); /* IE 9 */
-        transform: rotate(0deg); /* Firefox 16+, IE 10+, Opera */
+        -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+        transform: rotate(0)
     }
     100% {
-        -webkit-transform: rotate(360deg); /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(360deg); /* IE 9 */
-        transform: rotate(360deg); /* Firefox 16+, IE 10+, Opera */
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg)
     }
 }
 
 @keyframes spin {
     0% {
-        -webkit-transform: rotate(0deg); /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(0deg); /* IE 9 */
-        transform: rotate(0deg); /* Firefox 16+, IE 10+, Opera */
+        -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+        transform: rotate(0)
     }
     100% {
-        -webkit-transform: rotate(360deg); /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(360deg); /* IE 9 */
-        transform: rotate(360deg); /* Firefox 16+, IE 10+, Opera */
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg)
     }
 }
 
-/* *****************************************************REST**************************************************** */
-
 body {
-    font-family: 'Chivo-Light', Helvetica, sans-serif;
+    font-family: Chivo-Light, Helvetica, sans-serif;
     font-size: 123%;
     font-size: 1.23vw;
     padding: 0;
-    margin: 0;
+    margin: 0
 }
 
 h1,
@@ -184,22 +183,26 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Caviar-Dreams', Arial, sans-serif;
+    font-family: Caviar-Dreams, Arial, sans-serif
+}
+
+.contact_form_container,
+form h2 {
+    font-family: Chivo-Light !important
 }
 
 section {
     width: 100%;
     min-height: 500px;
     height: auto;
-    padding: 0;
+    padding: 0
 }
 
 nav {
     display: flex;
     width: 100%;
     min-height: 15vh;
-    background-color: #ffffff81;
-    /* font-family: ''; */
+    background-color: #ffffff81
 }
 
 .container {
@@ -214,7 +217,7 @@ nav {
     flex-flow: row nowrap;
     -webkit-flex-flow: row nowrap;
     justify-content: space-around;
-    background-color: transparent;
+    background-color: transparent
 }
 
 .navigation {
@@ -230,7 +233,7 @@ nav {
     display: flex;
     flex-flow: row nowrap;
     -webkit-flex-flow: row nowrap;
-    justify-content: flex-end;
+    justify-content: flex-end
 }
 
 .navigation a {
@@ -238,12 +241,32 @@ nav {
     display: block;
     padding: 1rem;
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: #000
+}
+
+.navigation a.active {
+    color: #007dc6 !important;
+}
+
+.navigation .jezik a {
+    margin-left: 1rem;
+    color: #1d1d1d65;
+}
+
+.navigation .jezik~.jezik a {
+    margin-left: 0;
+}
+
+.navigation .jezik a {
+    padding: 1rem 0;
+}
+
+.navigation li#trtica {
+    padding-top: 1rem;
 }
 
 .navigation a:before {
-    content: '';
-    background: center / contain no-repeat url('images/underline-link.png');
+    background: url(images/underline-link.png) center/contain no-repeat;
     position: absolute;
     width: 80%;
     height: 10px;
@@ -252,393 +275,404 @@ nav {
     visibility: hidden;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s
 }
 
-.navigation a:hover,
-.navigation a:focus {
-    color: #007dc6;
+.svetlo_container,
+.svetlo_container .content,
+.tirazi_container,
+.tirazi_container .content {
+    transition: all .6s ease-in-out
+}
+
+.navigation a:focus,
+.navigation a:hover {
+    color: #007dc6
 }
 
 .navigation a:hover:before {
     visibility: visible;
     -webkit-transform: scaleX(1);
-    transform: scaleX(1);
+    transform: scaleX(1)
 }
 
 .logo {
     width: 19%;
-    flex-shrink: 1;
-    vertical-align: middle;
+    flex-shrink: 1
 }
 
 #logo {
-    width: 96%;
-    padding: 2%;
-    vertical-align: middle;
+    width: 90%;
+    padding: 4%
 }
 
-@media only screen and (max-width: 450px) {
-    /*mobile optimisation break point*/
+@media only screen and (max-width:450px) {
     body {
-        font-size: 3vw !important;
+        font-size: 3vw !important
     }
     .logo {
-        width: 40% !important;
+        width: 40% !important
     }
     .navigation {
-        padding: 0 !important;
+        padding: 0 !important
     }
     .navigation a {
-        padding: .41rem !important;
+        padding: .41rem !important
+    }
+    .navigation .jezik a {
+        margin-left: .41rem !important;
+    }
+    .navigation .jezik~.jezik a {
+        margin-left: 0 !important;
+    }
+    .navigation .jezik a {
+        padding: .41rem 0 !important;
+    }
+    .navigation li#trtica {
+        padding-top: .41rem !important;
     }
     .parallax {
         width: 165vw !important;
         -webkit-transform: translate(-50%, -55%) !important;
-        transform: translate(-50%, -55%) !important;
+        transform: translate(-50%, -55%) !important
+    }
+    .parallax_text {
+        width: 48vw !important;
     }
     .parallax_text h1 {
+        margin-top: 0;
         width: 76vw !important;
-        /* font-size: 268% !important; */
-        font-size: 7vw !important;
+        font-size: 7vw !important
     }
     .parallax_text p {
-        font-size: 3.6vw !important;
+        font-size: 3.6vw !important
     }
     .parallax~img.text_box[invisible='1'] {
-        visibility: hidden !important;
+        visibility: hidden !important
     }
     .parallax~img.package {
-        width: 50vw !important;
+        width: 50vw !important
     }
     .scissors {
         top: 55vh !important;
-        width: 34.6vw !important;
+        width: 34.6vw !important
     }
     .flap#upper {
-        top: 36vh !important;
+        top: 36vh !important
     }
     .flap#lower {
-        top: 38vh !important;
+        top: 38vh !important
     }
     section {
-        min-height: 300px !important;
+        min-height: 300px !important
     }
     .svetlo_container .content .text {
         right: 7% !important;
-        width: 77% !important;
+        width: 77% !important
     }
     b {
         font-size: 120% !important;
-        font-size: 3.596vw !important;
+        font-size: 3.596vw !important
     }
     .text p {
         width: 100% !important;
         font-size: 400% !important;
-        font-size: 3.8vw !important;
+        font-size: 3.8vw !important
     }
     .back_content {
         width: 87% !important;
-        right: 3% !important;
+        right: 3% !important
     }
     p.back_text {
         line-height: 4.5vw !important;
-        font-size: 3.945vw !important;
+        font-size: 3.945vw !important
+    }
+    form {
+        left: 2% !important;
+        right: 52% !important
     }
     form h2 {
-        font-size: 2.8vw !important;
+        font-size: 2.8vw !important
     }
     form p.mini_text {
-        /* font-size: 74.62% !important; */
-        font-size: 2.8vw !important;
+        font-size: 2.4vw !important;
+        margin: 0 !important
     }
-    input::placeholder,
-    textarea::placeholder,
+    button,
     input,
+    input::placeholder,
     textarea,
-    button {
+    textarea::placeholder {
         font-size: .62rem !important;
-        font-size: 2.3vw !important;
+        font-size: 2.3vw !important
     }
     .zasto_container .floaty_box {
-        opacity: .7;
+        opacity: .7
     }
     .floaty_box.second {
-        left: 4% !important;
+        left: 4% !important
     }
     .floaty_box.third {
         top: 90% !important;
-        right: 17% !important;
+        right: 17% !important
     }
     .zasto_container ul {
         width: 100% !important;
-        font-size: 4vw !important;
+        font-size: 4vw !important
     }
     .zasto_container ul li {
-        line-height: 4.6vw !important;
+        line-height: 4.6vw !important
     }
     .tirazi_container .content .text {
         right: 8% !important;
-        width: 77% !important;
+        width: 77% !important
     }
-    /* ---------------------------------------------- */
     .text h2 {
-        /* font-size: 400%; */
         font-size: 6.1vw !important;
-        width: 98% !important;
+        width: 98% !important
     }
     .contact_form_container {
-        height: 220px !important;
+        height: 220px !important
+    }
+    .box {
+        height: 100%
+    }
+    .box:first-of-type {
+        background-position-y: 40% !important
+    }
+    .box:last-of-type {
+        background-position-y: 64.7% !important
+    }
+    .tipovi_proizvoda_container .text h2 {
+        width: 80% !important
+    }
+    .tipovi_proizvoda_container {
+        height: 550px !important
     }
     .proizvodi_boxes {
         flex-flow: column nowrap;
         -webkit-flex-flow: column nowrap;
-    }
-    .box {
-        height: 100%;
-    }
-    .box:first-of-type {
-        background-position-y: 40% !important;
-    }
-    .box:last-of-type {
-        background-position-y: 64.7% !important;
-    }
-    .tipovi_proizvoda_container .text h2 {
-        width: 80% !important;
-    }
-    .tipovi_proizvoda_container {
-        height: 550px !important;
-    }
-    .proizvodi_boxes {
         height: 80% !important;
-        margin-top: 4% !important;
+        margin-top: 4% !important
     }
     .inner_box_content p {
-        top: 60% !important;
+        top: 60% !important
     }
     .under_box_content {
-        height: 8% !important;
+        height: 8% !important
     }
     .under_box_content p {
         left: 13% !important;
         right: 10% !important;
-        font-size: 2.92vw !important;
+        font-size: 2.92vw !important
     }
     footer {
         height: 35vw !important;
-        min-height: 170px !important;
+        min-height: 170px !important
     }
     .flex_footer .content_strip {
         width: 30.5% !important;
-        height: 85% !important;
+        height: 85% !important
     }
     .flex_footer .content_strip ul {
-        line-height: 6.5vw !important;
+        line-height: 6.5vw !important
     }
     .flex_footer .content_strip:nth-child(2) ul li:nth-child(n+2) {
-        /* line-height: 120%; */
-        line-height: 3.2vw !important;
+        line-height: 3.2vw !important
     }
     .footers_footer {
-        height: 20px !important;
+        height: 20px !important
     }
     .footers_footer span {
-        width: 54% !important;
+        width: 54% !important
     }
     table {
         float: none !important;
-        width: 70% !important;
+        width: 70% !important
     }
 }
 
-@media only screen and (min-width: 450px) and (max-width: 800px) {
-    /*tablet optimisation break point*/
+@media only screen and (min-width:450px) and (max-width:800px) {
     body {
-        font-size: 1.9vw !important;
+        font-size: 1.9vw !important
     }
     .parallax {
         -webkit-transform: translate(-50%, -50%) !important;
-        transform: translate(-50%, -50%) !important;
+        transform: translate(-50%, -50%) !important
     }
     .parallax_text h1 {
+        margin-top: 5%;
+        margin-left: -8%;
         width: 60vw !important;
         font-size: 268% !important;
-        font-size: 5.36vw !important;
+        font-size: 5.36vw !important
+    }
+    .svetlo_container .content .text,
+    .tirazi_container .content .text {
+        right: 18% !important;
+        width: 65% !important
     }
     section {
-        min-height: 400px !important;
-    }
-    .svetlo_container .content .text {
-        right: 18% !important;
-        width: 65% !important;
+        min-height: 400px !important
     }
     b {
         font-size: 130% !important;
-        font-size: 2.596vw !important;
+        font-size: 2.596vw !important
     }
     .text p {
         font-size: 400% !important;
-        font-size: 2.4vw !important;
+        font-size: 2.4vw !important
     }
     .contact_form_container {
-        height: auto !important;
+        height: auto !important
     }
     p.back_text {
-        font-size: 2.945vw !important;
+        font-size: 2.945vw !important
     }
     form h2 {
-        font-size: 1.94vw !important;
+        font-size: 1.94vw !important
     }
     form p.mini_text {
         font-size: 74.62% !important;
-        font-size: 1.42vw !important;
+        font-size: 1.42vw !important
     }
-    input::placeholder,
-    textarea::placeholder,
+    button,
     input,
+    input::placeholder,
     textarea,
-    button {
+    textarea::placeholder {
         font-size: .62rem !important;
-        font-size: 1.3vw !important;
+        font-size: 1.3vw !important
     }
     .zasto_container ul {
-        font-size: 2vw !important;
+        font-size: 2vw !important
     }
     .zasto_container ul li {
-        line-height: 3.2vw !important;
-    }
-    .tirazi_container .content .text {
-        right: 18% !important;
-        width: 65% !important;
+        line-height: 3.2vw !important
     }
     .tipovi_proizvoda_container {
         height: 600px !important;
-        padding-top: 5% !important;
+        padding-top: 5% !important
     }
     .proizvodi_boxes {
         height: 70% !important;
-        margin-top: 4% !important;
+        margin-top: 4% !important
     }
     .under_box_content {
-        height: 17% !important;
+        height: 17% !important
     }
     .under_box_content p {
-        font-size: 2.3vw !important;
+        font-size: 2.3vw !important
     }
     footer {
-        min-height: 150px !important;
+        min-height: 150px !important
     }
     .flex_footer .content_strip {
         width: 30.5% !important;
-        height: 85% !important;
+        height: 85% !important
     }
     .flex_footer .content_strip ul {
-        line-height: 3.5vw !important;
+        line-height: 3.5vw !important
     }
     .flex_footer .content_strip:nth-child(2) ul li:nth-child(n+2) {
-        /* line-height: 120%; */
-        line-height: 2.2vw !important;
+        line-height: 2.2vw !important
     }
     .footers_footer {
-        height: 30px !important;
+        height: 30px !important
     }
 }
 
-@media only screen and (min-width: 1450px) {
-    /*desktop optimisation break point*/
+@media only screen and (min-width:1450px) {
     .text h2 {
-        font-size: 4.8vw !important;
+        font-size: 4.8vw !important
     }
     p.back_text {
         font-size: 2.1vw !important;
-        line-height: 2.55vw !important;
+        line-height: 2.55vw !important
     }
     form h2 {
-        font-size: 1.4vw !important;
+        font-size: 1.4vw !important
     }
 }
 
-/* ************************************************PARALLAX************************************************* */
-
 .parallax_container {
     clip-path: inset(0);
-    position: relative;
     width: 100%;
     height: 85vh;
     overflow: hidden;
     position: fixed;
-    top: 15vh;
+    top: 15vh
+}
+
+.flap,
+.parallax,
+.parallax_text,
+.scissors {
+    position: absolute
 }
 
 .parallax {
-    position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -44%);
     transform: translate(-50%, -44%);
     width: 95vw;
     max-width: 1900px;
-    z-index: 0;
+    z-index: 0
+}
+
+.parallax~img.package,
+.parallax~img.text_box {
+    top: 35vh;
+    transform-origin: 0 0;
+    position: absolute;
+    display: block
 }
 
 .parallax~img.package {
-    position: absolute;
-    display: block;
-    top: 35vh;
     left: 30vw;
-    width: 35vw;
-    transform-origin: 0 0;
+    width: 35vw
 }
 
 .parallax~img.text_box {
-    position: absolute;
-    display: block;
-    top: 35vh;
     width: 16vw;
-    transform-origin: 0 0;
-    visibility: visible;
+    visibility: visible
 }
 
 .parallax_text {
-    position: absolute;
     width: 45vw;
     font-weight: 800;
-    color: #554b4a;
+    color: #554b4a
 }
 
 .parallax_text h1 {
     width: 35vw;
     font-size: 300%;
     font-size: 3.68vw;
-    margin-top: 0;
+    margin-top: 13%
 }
 
 .scissors {
-    position: absolute;
-    width: 19.6vw;
+    width: 19.6vw
 }
 
 .flap {
-    position: absolute;
     left: -5vh;
     height: 6vw;
-    transform-origin: top center;
+    transform-origin: top center
 }
 
 .flap#upper {
-    top: 38vh;
+    top: 38vh
 }
 
 .flap#lower {
-    top: 41vh;
+    top: 41vh
 }
 
-/* ************************************************NAJSVETLO************************************************* */
-
 .svetlo_container {
-    background: 0 63% / cover no-repeat url('images/pexels-photo-709848.jpeg');
-    transition: all .6s ease-in-out;
+    background: url(images/pexels-photo-709848.jpeg) 0 63%/cover no-repeat
 }
 
 .svetlo_container .content {
@@ -647,8 +681,7 @@ nav {
     margin-top: 280vh;
     transform: translateX(-100%);
     opacity: 0;
-    background: rgba(255, 255, 255, 0.9);
-    transition: all .6s ease-in-out;
+    background: rgba(255, 255, 255, .9)
 }
 
 .svetlo_container .content .text {
@@ -658,42 +691,40 @@ nav {
     right: 28%;
     width: 55%;
     height: auto;
-    background-color: transparent;
+    background-color: transparent
 }
 
 .svetlo_container .wavy_line_green {
-    width: 16vw;
+    width: 16vw
 }
 
 .text h2 {
     font-size: 400%;
     font-size: 4.9vw;
-    font-weight: bold;
+    font-weight: 700;
     margin: 0;
-    width: 80%;
+    width: 80%
 }
 
 .text p {
     width: 85%;
     margin: 5% 0 0 auto;
     font-size: 140%;
-    font-size: 1.72vw;
+    font-size: 1.72vw
 }
 
 .content[slide_in='1'] {
     transform: translateX(0) !important;
-    opacity: 1 !important;
+    opacity: 1 !important
 }
 
-/* ***********************************************ZASTOKARTON************************************************ */
-
 .zasto_container {
-    background-color: #ffffff;
+    background-color: #fff
 }
 
 .zasto_container .content {
     width: 100%;
-    min-height: 100%;
+    min-height: 100%
 }
 
 .zasto_container .content .text {
@@ -702,42 +733,41 @@ nav {
     top: 4%;
     right: 0;
     width: 85%;
-    height: auto;
+    height: auto
 }
 
-.zasto_container h2,
-.tipovi_proizvoda_container h2 {
-    /* width: 71%; */
-    margin: 0 auto;
+.tipovi_proizvoda_container h2,
+.zasto_container h2 {
+    margin: 0 auto
 }
 
 .zasto_container div,
 .zasto_container ul {
     position: relative;
     width: 75%;
-    margin: 5% auto 0;
+    margin: 5% auto 0
 }
 
 .zasto_container ul {
     margin: 1% auto;
-    color: rgb(29, 29, 29);
+    color: #1d1d1d;
     font-size: 120%;
-    font-size: 1.473vw;
+    font-size: 1.473vw
 }
 
 .zasto_container ul li {
-    line-height: 2.7vw;
+    line-height: 2.7vw
 }
 
 b {
     font-size: 130%;
     font-size: 1.595vw;
     font-weight: 800;
-    color: #007dc6;
+    color: #007dc6
 }
 
 .green {
-    color: #4db848;
+    color: #4db848
 }
 
 .b-blobs__b1 {
@@ -745,14 +775,13 @@ b {
     left: -11%;
     top: 2%;
     width: 40vw;
-    height: 40vw;
+    height: 40vw
 }
 
 .floaty_box {
-    content: '';
     position: absolute !important;
     margin: 0 !important;
-    background-color: #4db848;
+    background-color: #4db848
 }
 
 .floaty_box.first {
@@ -761,7 +790,7 @@ b {
     width: 10vw !important;
     height: 10vw !important;
     border-radius: 30%;
-    transform: rotate(14deg);
+    transform: rotate(14deg)
 }
 
 .floaty_box.second {
@@ -771,7 +800,7 @@ b {
     height: 13.5vw !important;
     border-radius: 20%;
     transform: rotate(-16deg);
-    background-color: #007dc6;
+    background-color: #007dc6
 }
 
 .floaty_box.third {
@@ -780,7 +809,7 @@ b {
     width: 10.7vw !important;
     height: 10.7vw !important;
     border-radius: 20%;
-    transform: rotate(-34deg);
+    transform: rotate(-34deg)
 }
 
 .floaty_box.forth {
@@ -790,18 +819,11 @@ b {
     height: 17.2vw !important;
     border-radius: 45%;
     transform: rotate(14deg);
-    background-color: #007dc6;
-}
-
-/* ************************************************MALITIRAZI************************************************* */
-
-.tirazi_container {
-    background-color: orchid;
+    background-color: #007dc6
 }
 
 .tirazi_container {
-    background: 0 38% / cover no-repeat url('images/pexels-photo-296878.jpeg');
-    transition: all .6s ease-in-out;
+    background: url(images/pexels-photo-296878.jpeg) 0 38%/cover no-repeat
 }
 
 .tirazi_container .content {
@@ -810,8 +832,7 @@ b {
     min-height: inherit;
     transform: translateX(-100%);
     opacity: 0;
-    background: rgba(255, 255, 255, 0.9);
-    transition: all .6s ease-in-out;
+    background: rgba(255, 255, 255, .9)
 }
 
 .tirazi_container .content .text {
@@ -821,21 +842,18 @@ b {
     right: 28%;
     width: 55%;
     height: auto;
-    background-color: transparent;
+    background-color: transparent
 }
 
 .tirazi_container .wavy_line_green {
-    width: 25.5vw;
+    width: 25.5vw
 }
-
-/* ************************************************CONTACT FORM********************************************* */
 
 .contact_form_container {
     position: relative;
     width: 100%;
     height: 600px;
-    font-family: 'Chivo-Light' !important;
-    background: 0 70% / cover no-repeat url('images/leone-venter-469710-unsplash.jpg');
+    background: url(images/leone-venter-469710-unsplash.jpg) 0 70%/cover no-repeat
 }
 
 .back_content {
@@ -845,11 +863,16 @@ b {
     width: 65%;
     max-width: 900px;
     right: 18%;
-    background-color: #4eb848ad;
+    background-color: #4eb848ad
+}
+
+button,
+form {
+    background-color: #fff
 }
 
 p.back_text {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 240%;
     font-size: 2.945vw;
     letter-spacing: 10%;
@@ -857,7 +880,7 @@ p.back_text {
     line-height: 3vw;
     width: 49%;
     margin: 14% 0 0 auto;
-    color: #ffffff;
+    color: #fff
 }
 
 form {
@@ -865,85 +888,83 @@ form {
     top: 8%;
     bottom: -50%;
     left: 5%;
-    right: 56%;
-    background-color: #ffffff;
+    right: 56%
+}
+
+.form_content,
+.tipovi_proizvoda_container h2 {
+    position: relative
 }
 
 .form_content {
     display: block;
-    position: relative;
     width: 77%;
     height: 80%;
-    margin: 10% auto;
+    margin: 10% auto
 }
 
 form h2 {
     width: min-content;
     margin: 0 auto 5%;
     letter-spacing: 5%;
-    letter-spacing: .06vw;
-    font-family: 'Chivo-Light' !important;
+    letter-spacing: .06vw
 }
 
 form p.mini_text {
     text-align: left;
     font-size: 74.62%;
     font-size: .915vw;
-    font-weight: 800;
+    font-weight: 800
 }
 
+input:first-of-type {
+    margin-top: 0;
+}
+
+button,
 input,
-textarea,
-button {
+textarea {
     width: 100%;
     padding: 3% 4%;
     border: 3px solid #4db848;
     margin: 5% auto 2%;
-    font: inherit;
+    font: inherit
 }
 
 textarea {
     resize: none;
     height: 25%;
-    overflow: auto;
+    overflow: auto
 }
 
-input::placeholder,
-textarea::placeholder,
+button,
 input,
+input::placeholder,
 textarea,
-button {
-    font-family: 'Chivo-Regular';
+textarea::placeholder {
+    font-family: Chivo-Regular;
     font-weight: 800;
     font-size: 20%;
     font-size: 1vw;
-    color: #000000;
-    opacity: 1;
+    color: #000;
+    opacity: 1
 }
 
 button {
-    /* margin-top: 1%; */
-    background-color: white;
     cursor: pointer;
-
-    transition: all .8s ease-in-out;
+    background-color: #4eb848ad;
+    transition: all .8s ease-in-out
 }
 
 button:hover {
-    background-color: #4eb84850;
+    background-color: #4eb84850
 }
-
-/* *********************************************TIPOVI PROIZVODA******************************************** */
 
 .tipovi_proizvoda_container {
     padding-top: 7%;
     width: 100%;
     height: 850px;
-    background-color: #ffffff;
-}
-
-.tipovi_proizvoda_container h2 {
-    position: relative;
+    background-color: #fff
 }
 
 h2 img {
@@ -951,7 +972,7 @@ h2 img {
     display: block;
     width: 45vw;
     bottom: -30%;
-    left: 0;
+    left: 0
 }
 
 .proizvodi_boxes {
@@ -959,39 +980,34 @@ h2 img {
     width: 100%;
     height: 45%;
     margin-top: 5%;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
+    display: flex
 }
 
 .proizvodi_boxes .box {
     display: flex;
     width: 100%;
-    transition: all .4s ease-in-out;
-    /* background-color: #4db848; */
+    transition: all .4s ease-in-out
 }
 
 .box:nth-child(1) {
-    background: center / cover no-repeat url('images/IMG1.jpg');
+    background: url(images/IMG1.jpg) center/cover no-repeat
 }
 
 .box:nth-child(2) {
-    background: 0 33% / cover no-repeat url('images/IMG2.jpg');
+    background: url(images/IMG2.jpg) 0 33%/cover no-repeat
 }
 
 .box:nth-child(3) {
-    background: center / cover no-repeat url('images/IMG3.jpg');
+    background: url(images/IMG3.jpg) center/cover no-repeat
 }
 
 .proizvodi_boxes .box:hover {
-    transform: scale(.96);
+    transform: scale(.96)
 }
 
 .proizvodi_boxes .box:hover>.box_content {
     visibility: visible;
-    opacity: 1;
+    opacity: 1
 }
 
 .box_content {
@@ -1001,121 +1017,110 @@ h2 img {
     width: 100%;
     height: 100%;
     transition: all .6s ease-in-out;
-    background-color: #4eb848ad;
+    background-color: #4eb848ad
 }
 
 .box_content b {
     display: table-cell;
     width: 100%;
-    vertical-align: middle;
     text-align: center;
     font-size: 140%;
     font-size: 1.72vw;
     letter-spacing: 10%;
     letter-spacing: .126vw;
-    color: #ffffff;
+    color: #fff
 }
 
 .box:nth-child(2) .box_content b {
     vertical-align: top;
-    transform: translateY(15%);
+    transform: translateY(15%)
+}
+
+.inner_box_content p,
+.under_box_content p {
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto
 }
 
 .inner_box_content p {
     position: absolute;
-    top: 50%;
     left: 12%;
     right: 10%;
-    transform: translateY(-50%);
-    margin: auto;
-    color: white;
-    font-family: 'Chivo-Light', Helvetica, sans-serif;
+    color: #fff;
+    font-family: Chivo-Light, Helvetica, sans-serif
 }
 
 .under_box_content {
     position: relative;
     width: 100%;
-    height: 30%;
+    height: 30%
 }
 
 .under_box_content p {
     position: absolute;
-    top: 50%;
     left: 20%;
     right: 20%;
-    transform: translateY(-50%);
-    margin: auto;
     font-size: 140%;
-    font-size: 1.72vw;
-    /* opacity: 0; */
-    /* visibility: hidden; */
-    /* transition: all .6s ease-in-out; */
+    font-size: 1.72vw
 }
 
 .pVisible {
     visibility: visible !important;
-    opacity: 1 !important;
+    opacity: 1 !important
 }
-
-/* animation */
 
 @-webkit-keyframes fade_in {
     100% {
         visibility: visible;
-        opacity: 1;
+        opacity: 1
     }
 }
 
 @-moz-keyframes fade_in {
     100% {
         visibility: visible;
-        opacity: 1;
+        opacity: 1
     }
 }
 
 @-ms-keyframes fade_in {
     100% {
         visibility: visible;
-        opacity: 1;
+        opacity: 1
     }
 }
 
 @-o-keyframes fade_in {
     100% {
         visibility: visible;
-        opacity: 1;
+        opacity: 1
     }
 }
 
 @keyframes fade_in {
     100% {
         visibility: visible;
-        opacity: 1;
+        opacity: 1
     }
 }
-
-/* ***************************************************FOOTER************************************************ */
 
 footer {
     position: relative;
     width: 100%;
     height: 23vw;
     min-height: 300px;
-    color: #ffffff;
-    background-color: #007dc6;
+    color: #fff;
+    background-color: #007dc6
 }
 
 .flex_footer {
     width: 100%;
     height: 100%;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
     justify-content: center;
     align-items: center;
-    align-content: space-around;
+    align-content: space-around
 }
 
 .flex_footer .content_strip {
@@ -1128,134 +1133,120 @@ footer {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: flex-start;
+    justify-content: flex-start
 }
 
 .flex_footer .content_strip:last-child svg {
-    margin: 0 0 0 auto;
+    margin: 0 0 0 auto
 }
 
 .flex_footer .content_strip:last-child p {
     text-align: right;
-    margin: 14% 0 0 0;
+    margin: 14% 0 0
 }
 
 .flex_item {
     margin: 0;
     width: 100%;
     height: min-content;
-    text-align: center;
+    text-align: center
 }
 
 .flex_footer .content_strip ul {
-    /* margin: 0 auto; */
     padding: 0;
     width: min-content;
     line-height: 200%;
     line-height: 2.5vw;
     list-style: none;
-    text-align: left;
+    text-align: left
 }
 
 .flex_footer .content_strip:nth-child(2) ul li:nth-child(n+2) {
     line-height: 120%;
-    line-height: 1.5vw;
+    line-height: 1.5vw
 }
 
-.flex_footer .content_strip ul li:nth-child(1),
-.flex_footer .content_strip b {
-    font-family: 'Helvetica';
-    color: #ffffff;
+.flex_footer .content_strip b,
+.flex_footer .content_strip ul li:nth-child(1) {
+    font-family: Helvetica;
+    color: #fff;
     font-size: 125%;
     font-size: 1.534vw;
     font-weight: 600;
-    margin-bottom: 15%;
+    margin-bottom: 15%
 }
 
 .footers_footer {
     width: 100%;
     height: 50px;
-    color: #ffffff;
-    background-color: #4db848;
+    color: #fff;
+    background-color: #4db848
 }
 
 .footers_footer div {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 100%
 }
 
 .footers_footer span {
     position: absolute;
     top: 55%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
 }
 
 footer a,
 footer a:active,
 footer a:visited {
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
-    transition: all .6s ease-in-out;
+    transition: all .6s ease-in-out
 }
 
 footer a:hover {
-    text-decoration: underline;
+    text-decoration: underline
 }
-
-/* **************************************************KONTAKT************************************************ */
-
-/* ***************************************************MAPA************************************************** */
 
 .map_container {
     width: 100%;
-    height: 70vh;
+    height: 70vh
 }
 
 .map_container iframe {
     -webkit-filter: saturate(20%);
     filter: saturate(20%);
-    transition: all .6s ease-in-out;
+    transition: all .6s ease-in-out
 }
 
 .map_container iframe:hover {
     -webkit-filter: saturate(100%);
-    filter: saturate(100%);
+    filter: saturate(100%)
 }
 
 .info_container {
     width: 100%;
-    height: 500px;
-}
-
-/* ***************************************************INFO************************************************** */
-
-.info_container {
-    padding: 3% 0;
     height: 50vh;
-    min-height: 300px;
+    min-height: 300px
 }
 
 .info_container h2 {
     margin: 0 8%;
     letter-spacing: 20%;
-    letter-spacing: .245vw;
+    letter-spacing: .245vw
 }
 
 table {
     margin: 5%auto;
     width: 45%;
     float: left;
-    text-align: center;
+    text-align: center
 }
 
-th,
-td {
-    padding: 2%;
+td,
+th {
+    padding: 2%
 }
-
-/* ***************************************************INPROGRESS************************************************** */
 
 .in_content {
     position: absolute;
@@ -1263,13 +1254,22 @@ td {
     width: 100%;
     height: 100%;
     font-size: 3vw;
-    background: center / cover url('images/crafts.jpeg');
-    z-index: -1;
+    background: url(images/background_karton.png) no-repeat;
+    background-position-y: bottom;
+    background-size: 100% 85%;
+    z-index: -1
 }
 
 .in_content .in_text {
     position: absolute;
-    top: 50vh;
+    top: 30vh;
     left: 12vw;
     width: 40vw;
+    color: #fff
+}
+
+.in_content~.footers_footer {
+    position: absolute;
+    bottom: 0;
+    background-color: #1d1d1d86
 }
